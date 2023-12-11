@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../../fonts/Montserrat-VariableFont_wght.ttf');    
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.headerMain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 15vw 2vh 15vw;
+    max-width: 100vw;
+    max-height: 10vh;
+    img {
+        max-width: 30vw; /* Максимальная ширина изображения */
+        height: auto; /* Автоматическое вычисление высоты, чтобы сохранить пропорции */
+    }
+}
+.headerPContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3vw;
+  
+    p{
+        color:#282828;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 26px */
+        transition: font-size 0.3s ease, cursor 0.3s ease;
+        
+    }
+    p:hover {
+        font-size: 22px;
+        cursor: pointer;  
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .headerMain {
+        padding: 12vh 2vw; /* Изменено значение отступов для маленьких экранов */
+
+        p {
+            font-size: 14px; /* Изменено значение размера шрифта для маленьких экранов */
+        }
+    
+        p:hover {
+            font-size: 16px; /* Изменено значение размера шрифта при наведении для маленьких экранов */
+        }
+    }
+
+    img {
+        max-width: 90vw; /* Изменено значение максимальной ширины изображения для маленьких экранов */
+    }
+
+  
+    .headerPContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

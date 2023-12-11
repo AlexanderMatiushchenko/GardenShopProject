@@ -1,0 +1,145 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../../fonts/Montserrat-VariableFont_wght.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.errPageH1 {
+  color: #393;
+  font-size: 30vh;
+}
+
+.errPageH2 {
+  color: #282828;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 7vh;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 70.4px */
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.errPageP {
+  color: #8B8B8B;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2.1vh;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 26px */
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  white-space: normal; /* Используйте white-space: normal; */
+  padding: 50px;
+  max-width: 700px; /* Ограничьте максимальную ширину, чтобы текст не был слишком широким */
+  margin: 0 auto; /* Центрирование текста по горизонтали */
+}
+
+.errPageBtn {
+  border-radius: 6px;
+  border: none;
+  background: #393;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 56px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 26px */
+  -webkit-transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.errPageBtn:hover {
+  background: rgb(177, 245, 177);
+  color: rgb(4, 70, 4);
+  cursor: pointer;
+}
+
+.errPageContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2vh; /* Пространство между элементами в высоту */
+}
+
+.containerWithCactus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2vh; /* Пространство между изображениями в высоту */
+}
+.containerWithCactus img {
+  max-width: 30vw; /* Максимальная ширина изображения */
+  height: auto; /* Автоматическое вычисление высоты, чтобы сохранить пропорции */
+}
+
+.containerWithBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .containerWithCactus img {
+    max-width: 20vw;
+    max-height: auto;
+  }
+  .errPageP {
+    padding: 1vh;
+  }
+  .errPageBtn {
+    max-width: 10vw;
+    max-height: auto;
+    font-size: 5vw;
+    white-space: nowrap;
+  }
+}

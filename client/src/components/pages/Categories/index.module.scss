@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../../fonts/Montserrat-VariableFont_wght.ttf');    
+  }
+    .categoriesMain{
+    padding-top: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vh;
+    }
+    .categoriesH1{
+        color:#282828;
+        font-family: Montserrat;
+        font-size: 3.3vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%; /* 70.4px */ 
+        margin-left: -48vw;
+    }
+    .categoriesContainer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2vw;
+        justify-content: center;
+        align-items: center;
+        max-width: 75vw;
+    }
+    .categoriesH3{
+        color: #282828;
+        align-self: stretch;
+        font-family: Montserrat;
+        font-size: 1.5vw;
+        font-style: normal;
+        font-weight: 500;
+        word-wrap: break-word; 
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        cursor: pointer;     
+    }
+    .categoriesH3:hover{
+        opacity: 0.5;
+        
+    }
+    .categoriesDivImgContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-items: center;
+    text-align: center;
+    max-width: 20vw;
+   max-height: auto;
+        img{
+            width: 100%; 
+            height: 30vh; 
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            border-radius: 10px;
+        
+            
+        }
+        img:hover{
+            transform: scale(0.8);
+
+
+        }
+
+    }

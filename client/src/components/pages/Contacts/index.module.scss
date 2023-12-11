@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../../fonts/Montserrat-VariableFont_wght.ttf');
+    
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contactMain{
+display: inline-flex;
+padding: 0vw 15vw 4vh 15vw;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+gap: 4vh;
+}
+
+.contactContainer{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+gap: 3vh;
+max-width: 68vw;
+}
+.contactPhone{
+white-space: nowrap;
+display: flex;
+padding: 4vh;
+flex-direction: column;
+align-items: flex-start;
+gap: 2vh;
+flex: 1 0 0;
+align-self: stretch;
+border-radius:  12px;
+background:  #F1F3F4;
+}
+.contactSocials {
+display: flex;
+min-width: 28vw;
+padding: 4vh;
+flex-direction: column;
+align-items: flex-start;
+gap: 2vh;
+align-self: stretch;
+border-radius:  12px;
+background:  #F1F3F4;
+  
+}
+.contactAdress {
+display: flex;
+padding: 4vh;
+flex-direction: column;
+align-items: flex-start;
+gap: 2vh;
+flex: 1 0 0;
+align-self: stretch;
+border-radius: 12px;
+background: #F1F3F4;
+  
+}
+.contactsWorkingHours {
+display: flex;
+min-width: 28vw;
+padding: 4vh;
+flex-direction: column;
+align-items: flex-start;
+gap: 2vh;
+align-self: stretch;
+border-radius: 12px;
+background: #F1F3F4;
+}
+.mapImg {
+display: inline-flex;
+max-width: 68vw;
+max-height: 40vh;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+}
+
+.contactP{
+color:  #8B8B8B;
+font-family: Montserrat;
+font-size: 1vw;
+font-style: normal;
+font-weight: 500;
+
+}
+.contactH1{
+color:  #282828;
+font-family: Montserrat;
+font-size: 3.4vw;
+font-style: normal;
+font-weight: 700;
+align-self: stretch;
+}
+.contactH2{
+color:  #282828;
+font-family: Montserrat;
+font-size: 2vw;
+font-style: normal;
+font-weight: 600;
+
+}
+
+@media only screen and (max-width: 767px){
+    .contactMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+    gap: 1vh;
+        
+    }
+    .contactH1{
+        padding: 1vh;
+        font-size: 10vw;
+        justify-content: center;
+        display: flex;
+    
+    }
+    .contactH2{
+        font-size: 8vw;
+    }
+    .contactPhone{
+        white-space: normal;
+        padding: 1vh;
+    }
+    .contactAdress {
+        padding: 1vh;
+    }
+    .contactsWorkingHours{
+        padding: 1vh;
+    }
+    .contactSocials{
+        padding: 1vh;
+    }
+   
+}

@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../../fonts/Montserrat-VariableFont_wght.ttf');    
+  }
+
+.allProductsMain{
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    justify-content:  center;
+    align-items: baseline;
+h1{
+    color:  #282828;
+font-family: Montserrat;
+font-size: 7vh;
+font-style: normal;
+font-weight: 700;
+
+}
+
+
+}
+.containerWithAllProducts{
+    display: flex;
+    flex-direction: row;
+    max-width: 80vw;
+    flex-wrap: wrap;
+    gap:2vh;
+    padding: 0 0 0 20vh;
+}
+.containerWithImgAndBtn{
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2vh;
+    height: 100%;
+    border-bottom: 1px solid #DDD;
+
+    
+    img{
+        height: 100%;
+        width:100%;
+        max-width: 100%;
+        position: relative;
+        object-fit: cover;
+        border-radius: 10px;
+        }
+        button{
+        display: flex;
+        max-width: 15vw;
+        padding: 2vh 4vw;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        background: #393;
+        transition: background-color 0.3 ease,color 0.3 ease;
+        cursor: pointer;
+        position: absolute;
+        color:  #FFF;
+text-align: center;
+font-family: Montserrat;
+font-size: 2vh;
+font-style: normal;
+font-weight: 600;
+
+        
+        }
+        button:hover{
+            background-color: #282828;
+            color: #DDD;
+        }
+
+}
+.containerWithImgAndPrice{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+max-width: 20vw;
+max-height: auto;
+gap: 2vh;
+padding: 1vh;
+border-radius:  12px;
+border: 1px solid  #DDD;
+}
+.containerPriceAndTitle{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 2vh;
+max-height: 13vh;
+h2{
+ color: #282828;
+font-family: Montserrat;
+font-size: 3vh;
+font-style: normal;
+font-weight: 600;
+
+}
+h3{
+    overflow: hidden;
+color: #282828;
+text-overflow: ellipsis;
+font-family: Montserrat;
+font-size: 2vh;
+font-style: normal;
+font-weight: 500;
+
+}
+}

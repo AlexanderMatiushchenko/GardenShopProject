@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../../fonts/Montserrat-VariableFont_wght.ttf");
+}
+.allProductsMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 80vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+.allProductsMain h1 {
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 7vh;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.containerWithAllProducts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 80vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2vh;
+  padding: 0 0 0 20vh;
+}
+
+.containerWithImgAndBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 2vh;
+  height: 100%;
+  border-bottom: 1px solid #DDD;
+}
+.containerWithImgAndBtn img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.containerWithImgAndBtn button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 15vw;
+  padding: 2vh 4vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  background: #393;
+  -webkit-transition: background-color 0.3 ease, color 0.3 ease;
+  transition: background-color 0.3 ease, color 0.3 ease;
+  cursor: pointer;
+  position: absolute;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2vh;
+  font-style: normal;
+  font-weight: 600;
+}
+.containerWithImgAndBtn button:hover {
+  background-color: #282828;
+  color: #DDD;
+}
+
+.containerWithImgAndPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 20vw;
+  max-height: auto;
+  gap: 2vh;
+  padding: 1vh;
+  border-radius: 12px;
+  border: 1px solid #DDD;
+}
+
+.containerPriceAndTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 2vh;
+  max-height: 13vh;
+}
+.containerPriceAndTitle h2 {
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 3vh;
+  font-style: normal;
+  font-weight: 600;
+}
+.containerPriceAndTitle h3 {
+  overflow: hidden;
+  color: #282828;
+  text-overflow: ellipsis;
+  font-family: Montserrat;
+  font-size: 2vh;
+  font-style: normal;
+  font-weight: 500;
+}
