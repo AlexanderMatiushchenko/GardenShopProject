@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../../fonts/Montserrat-VariableFont_wght.ttf");
+}
+.allSalesMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 100vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding: 0 15vh 0 15vh;
+}
+.allSalesMain h1 {
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 4vw;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.contaierWithAllSalesProducts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3vh;
+}
+
+.containerWithProduct {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20vw;
+  min-height: 40vh;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  border-radius: 12px;
+  border: 1px solid #DDD;
+}
+
+.discountPercent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1vw;
+  border-radius: 6px;
+  background: #393;
+  position: absolute;
+  padding: 0.3vw;
+  right: 2vh;
+  top: 4vh;
+}
+.discountPercent p {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.containerWithPriceAndDiscountPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 2vw;
+  padding: 1vw;
+}
+.containerWithPriceAndDiscountPrice h2 {
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 600;
+}
+.containerWithPriceAndDiscountPrice h3 {
+  color: var(--txt-grey, #8B8B8B);
+  font-family: Montserrat;
+  font-size: 1.2vw;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.containerWithImgAndSalesPercent {
+  padding: 2vw;
+  border-bottom: 1px solid var(--grey-divider, #DDD);
+}
+.containerWithImgAndSalesPercent img {
+  width: 15vw;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+
+.containerWithProdukTitleAndPrice {
+  padding: 2vh;
+}
+.containerWithProdukTitleAndPrice p {
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 1vw;
+  font-style: normal;
+  word-wrap: normal;
+  font-weight: 500;
+}

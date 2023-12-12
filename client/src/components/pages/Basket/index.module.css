@@ -3,7 +3,7 @@
   src: url("../../../fonts/Montserrat-VariableFont_wght.ttf");
 }
 .basketMainContainer {
-  padding: 0vw 15vw 4vw 15vw;
+  padding: 1vw 15vw 4vw 15vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,6 +18,101 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   gap: 2vh;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container h1 {
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 5vh;
+  font-style: normal;
+  font-weight: 700;
+  padding-right: 2vw;
+}
+.container div {
+  width: 40vw;
+  height: 1px;
+  background: #DDD;
+}
+.container button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1vh 1vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  border: 1px solid #DDD;
+  color: rgb(139, 139, 139);
+  background-color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.7vw;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.emptyCartPandButton {
+  padding-top: 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2vw;
+}
+.emptyCartPandButton p {
+  color: #282828;
+  text-overflow: ellipsis;
+  font-family: Montserrat;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 500;
+}
+.emptyCartPandButton button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  padding: 1vw 3vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  background: #393;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .continerwithH1ShoppingCart {
@@ -38,11 +133,12 @@
 .continerwithH1ShoppingCart h1 {
   color: #282828;
   font-family: Montserrat;
-  font-size: 6vh;
+  font-size: 5vh;
   font-style: normal;
   font-weight: 700;
+  padding-right: 2vw;
 }
-.continerwithH1ShoppingCart form {
+.continerwithH1ShoppingCart div {
   width: 40vw;
   height: 1px;
   background: #DDD;
@@ -60,7 +156,7 @@
           align-items: center;
   border-radius: 6px;
   border: 1px solid #DDD;
-  color: #8B8B8B;
+  color: rgb(139, 139, 139);
   background-color: #FFF;
   text-align: center;
   font-family: Montserrat;
@@ -114,8 +210,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 3vw;
-  height: 3vw;
+  width: 4vw;
+  height: 4vw;
+  font-size: 3vw;
+  font-weight: 100;
+  color: rgb(139, 139, 139);
+  text-align: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -216,6 +316,7 @@
   font-size: 2.3vh;
   font-style: normal;
   font-weight: 600;
+  border: none;
 }
 .containerWithOrderDetails h2 {
   color: #282828;
@@ -350,8 +451,34 @@
 /* Styles for 1024px */
 @media screen and (max-width: 1024px) {
   .basketMainContainer {
-    padding: 0vw 5vw 4vw 5vw;
+    padding: 0vw 15vw 4vw 15vw;
     gap: 1vh;
+  }
+  .container div {
+    max-width: 25vw;
+  }
+  .container h1 {
+    font-size: 4vw;
+    padding: 0;
+  }
+  .container button {
+    max-width: 15vw;
+    max-height: auto;
+    font-size: 0.7vh;
+  }
+  .emptyCartPandButton {
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    max-width: 80vw;
+  }
+  .emptyCartPandButton p {
+    font-size: 1.4vh;
+  }
+  .emptyCartPandButton button {
+    font-size: 1vh;
+    max-width: 25vw;
+    max-height: 8vh;
   }
   .continerwithH1ShoppingCart {
     padding-top: 1vh;
@@ -434,6 +561,35 @@
   .basketMainContainer {
     padding: 0vw 3vw 4vw 3vw;
     gap: 1vh;
+  }
+  .basketMainContainer button {
+    font-size: 1.3vh;
+    width: 30vw;
+    height: 5vh;
+  }
+  .container {
+    gap: 2vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container h1 {
+    font-size: 6vw;
+  }
+  .emptyCartPandButton {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 90vw;
+  }
+  .emptyCartPandButton p {
+    font-size: 2vh;
+  }
+  .emptyCartPandButton button {
+    font-size: 2vh;
+    width: 40vw;
+    height: 8vh;
   }
   .continerwithH1ShoppingCart h1 {
     font-size: 4.5vw;

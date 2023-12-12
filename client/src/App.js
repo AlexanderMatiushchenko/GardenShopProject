@@ -6,22 +6,25 @@ import Contact from './components/pages/Contacts';
 import Header from './components/pages/Header/';
 
 import HomePage from './components/pages/HomePage'
-import CategoriesRender from './components/pages/CategoriesData';
+import CategoriesRender from './components/pages/CategoriesRender';
 import Basket from './components/pages/Basket';
-import ProductsRender from './components/ProductsData';
-
+import ProductsRender from './components/ProductsRender';
+import AllSalesRender from './components/AllSalesRender';
 function App() {
 
   return (
     <>
-     {/* <ProductsRender /> */}
-    <Basket />
+     
+    
       <Header />
-      {/* <HomePage /> */}
-{/* <CategoriesRender /> */}
       {/* <Routes>
-        <Route path="/categories/all" element={<Categories />} />
+        <Route path='/cart' element={<Basket />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/categories/all" element={<CategoriesRender />} />
+        <Route path='/products/all' element={<ProductsRender />} />        
+        <Route path ='*' element={<ErrorPage />} />
       </Routes> */}
+     <AllSalesRender />
       <Contact />
     </>
   );

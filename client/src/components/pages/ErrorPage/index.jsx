@@ -2,6 +2,7 @@ import React from "react";
 import kaktusImage from "../../../assets/errpage/kaktus.svg";
 import fourImage from "../../../assets/errpage/4.svg"
 import styles from "./index.module.css";
+import { Link } from "react-router-dom";
  function ErrorPage(){
     return(
         <div className={styles.errPageContainer}>
@@ -14,7 +15,9 @@ import styles from "./index.module.css";
                 <h2 className={styles.errPageH2}>Page Not Found</h2>
                 <p className={styles.errPageP}> We’re sorry, the page you requested could not be found.
                  Please go back to the homepage.</p>
-                <button className={styles.errPageBtn}>Go Home</button>
+                 <Link to= "/">
+                <button  className={styles.errPageBtn}>Go Home</button>
+                </Link>
             </div>
         </div>
     )

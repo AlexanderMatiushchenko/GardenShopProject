@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./index.module.css"
 import imgWithBtn from "../../../assets/homepage/img1.svg"
 import imgDiscount from "../../../assets/homepage/img2.svg"
+
 function HomePage(){
     return(
         <div className={styles.mainHomePageDiv}>
@@ -34,6 +35,7 @@ function HomePage(){
         <button>All sales</button>
         
         </div>
+       
         </div>
     )
 }export default HomePage;

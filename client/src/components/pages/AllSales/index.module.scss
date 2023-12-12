@@ -1,0 +1,111 @@
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('../../../fonts/Montserrat-VariableFont_wght.ttf');    
+        }
+        .allSalesMain{
+            display: flex;
+            flex-direction: column;
+            max-width: 100vw;
+            justify-content:  center;
+            align-items: baseline;
+            padding: 0 15vh 0 15vh;
+                h1{
+                color:  #282828;
+                font-family: Montserrat;
+                font-size: 4vw;
+                font-style: normal;
+                font-weight: 700;
+               
+                }
+        }
+
+        .contaierWithAllSalesProducts{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start; 
+            justify-content: center;
+            flex-wrap: wrap;
+            gap:3vh;
+        }
+        .containerWithProduct{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 20vw;
+            min-height: 40vh;
+            align-self: stretch;
+            border-radius: 12px;
+            border: 1px solid #DDD;
+        }
+        .discountPercent{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            gap: 1vw;
+            border-radius:  6px;
+            background: #393;
+            position: absolute;
+            padding: 0.3vw;
+            right: 2vh;
+            top: 4vh;
+            p{
+                color: #FFF;
+                font-family: Montserrat;
+                font-size: 1vw;
+                font-style: normal;
+                font-weight: 600;
+
+            }
+
+        }
+        .containerWithPriceAndDiscountPrice{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            gap: 2vw;
+            padding: 1vw;
+            h2{
+                color: #282828;
+                font-family: Montserrat;
+                font-size: 2vw;
+                font-style: normal;
+                font-weight: 600;
+    
+            }
+            h3{
+                color: var(--txt-grey, #8B8B8B);
+                font-family: Montserrat;
+                font-size: 1.2vw;
+                font-style: normal;
+                font-weight: 500;
+            }
+            
+        }
+    .containerWithImgAndSalesPercent {
+        padding: 2vw;
+        border-bottom: 1px solid var(--grey-divider, #DDD);
+        
+        
+        img {
+            width: 15vw;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+        
+        }
+    }
+    .containerWithProdukTitleAndPrice{
+        padding: 2vh;
+        p{
+            color: #282828;
+            font-family: Montserrat;
+            font-size: 1vw;
+            font-style: normal;
+            word-wrap:normal;
+            font-weight: 500;
+        }
+
+
+    }

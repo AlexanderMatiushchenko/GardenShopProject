@@ -3,13 +3,6 @@
   font-family: "Montserrat";
   src: url("../../../fonts/Montserrat-VariableFont_wght.ttf");
 }
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .headerMain {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,8 +22,40 @@
   max-height: 10vh;
 }
 .headerMain img {
-  max-width: 30vw; /* Максимальная ширина изображения */
-  height: auto; /* Автоматическое вычисление высоты, чтобы сохранить пропорции */
+  max-width: 30vw;
+  height: auto;
+}
+
+.headerBasket {
+  position: relative;
+}
+
+.cartItemsSummeSign {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 2vw;
+  height: 2vw;
+  background-color: green;
+  border-radius: 50%;
+  top: -10%;
+  left: -15%;
+}
+
+p {
+  color: white;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
 }
 
 .headerPContainer {

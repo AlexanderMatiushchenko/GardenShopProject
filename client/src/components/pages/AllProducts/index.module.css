@@ -37,7 +37,7 @@
   max-width: 80vw;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 2vh;
+  gap: 3vh;
   padding: 0 0 0 20vh;
 }
 
