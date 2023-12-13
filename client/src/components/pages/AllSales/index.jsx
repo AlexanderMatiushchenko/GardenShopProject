@@ -1,42 +1,59 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './index.module.css';
+import { Link } from 'react-router-dom';
 
 function AllSales({ products }) {
   const baseURL = 'http://localhost:3333';
-  const onlySalesItems = products.filter((el) => el.discont_price !== null);
-
+  const frontendURL = 'http://localhost:3000';
+  const [onlySalesItems, setOnlySalesItems] = useState([]);
   const [sortBy, setSortBy] = useState('default');
+  const [selectedSortOption, setSelectedSortOption] = useState('default');
   const [priceFrom, setPriceFrom] = useState('');
   const [priceTo, setPriceTo] = useState('');
-  const [filteredProducts, setFilteredProducts] = useState([...onlySalesItems]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [showSortOptions, setShowSortOptions] = useState(false);
+  const [isActiveSortOptions, setIsActiveSortOptions] = useState(false);
+  const [sortDirection, setSortDirection] = useState('down');
+
+  useEffect(() => {
+    const filteredItems = products.filter((el) => el.discont_price !== null);
+    filteredItems.sort(sortOptions[sortBy]);
+
+    if (priceFrom && priceTo) {
+      setFilteredProducts(
+        filteredItems.filter(
+          (product) =>
+            product.price >= parseFloat(priceFrom) && product.price <= parseFloat(priceTo)
+        )
+      );
+    } else {
+      setFilteredProducts(filteredItems);
+    }
+
+    setOnlySalesItems(filteredItems);
+  }, [products, sortBy, priceFrom, priceTo]);
 
   const sortOptions = {
-    default: (a, b) => 0,
+    default: (a, b) => a.title.localeCompare(b.title),
     newest: (a, b) => new Date(b.createdAt) - new Date(a.createdAt),
-    priceHighToLow: (a, b) => b.price - a.price,
-    priceLowToHigh: (a, b) => a.price - b.price,
+    priceHighToLow: (a, b) => b.discont_price - a.discont_price,
+    priceLowToHigh: (a, b) => a.discont_price - b.discont_price,
   };
 
   const handleSort = (option) => {
     setSortBy(option);
-    updateFilteredProducts(option, priceFrom, priceTo);
+    setSelectedSortOption(option);
+    setIsActiveSortOptions(false);
   };
 
-  const handlePriceFilter = () => {
-    updateFilteredProducts(sortBy, priceFrom, priceTo);
+  const handlePriceFilterChange = (from, to) => {
+    setPriceFrom(from);
+    setPriceTo(to);
   };
 
-  const updateFilteredProducts = (sortOption, from, to) => {
-    let filteredProducts = [...onlySalesItems];
-    filteredProducts.sort(sortOptions[sortOption]);
-
-    if (from && to) {
-      filteredProducts = filteredProducts.filter(
-        (product) => product.price >= parseFloat(from) && product.price <= parseFloat(to)
-      );
-    }
-
-    setFilteredProducts(filteredProducts);
+  const toggleSortOptions = () => {
+    setIsActiveSortOptions(!isActiveSortOptions);
+    setSortDirection(sortDirection === 'down' ? 'up' : 'down');
   };
 
   function discountPercent(discountedItem) {
@@ -49,31 +66,50 @@ function AllSales({ products }) {
     <div className={styles.allSalesMain}>
       <div className={styles.conteinerStateBtn}></div>
       <h1>Discounted items</h1>
-      <div className={styles.sortBtnContainer}>
+      <div className={styles.sortBtnAndInputsContainer}>
         <h4>Price</h4>
         <input
           type="text"
           placeholder="from"
           value={priceFrom}
-          onChange={(e) => setPriceFrom(e.target.value)}
+          onChange={(e) => handlePriceFilterChange(e.target.value, priceTo)}
         />
         <input
           type="text"
           placeholder="to"
           value={priceTo}
-          onChange={(e) => setPriceTo(e.target.value)}
+          onChange={(e) => handlePriceFilterChange(priceFrom, e.target.value)}
         />
-        <div>
-          <h4>Sorted</h4>
-          <button onClick={() => handleSort('default')}>by default ></button>
-          <button onClick={() => handleSort('newest')}>newest</button>
-          <button onClick={() => handleSort('priceHighToLow')}>price: high-low</button>
-          <button onClick={() => handleSort('priceLowToHigh')}>price: low-high</button>
-        </div>
-        <button onClick={handlePriceFilter}>Apply Price Filter</button>
+        <h4>Sorted</h4>
+        <div className={styles.containerWithSortBtn}>
+  <div className={styles.sortBtns + (isActiveSortOptions ? ` ${styles.active}` : '')}>
+  <button onClick={toggleSortOptions}>
+    {selectedSortOption === 'default'
+      ? 'by default'
+      : selectedSortOption === 'priceHighToLow'
+      ? 'price: high-low'
+      : selectedSortOption === 'priceLowToHigh'
+      ? 'price: low-high'
+      : selectedSortOption}{' '}
+    {sortDirection === '' ? '▼' : '▲'}
+  </button>
+
+    {isActiveSortOptions && (
+      <>
+        {selectedSortOption !== 'default' && (
+          <button onClick={() => handleSort('default')}>by default</button>
+        )}
+        <button onClick={() => handleSort('newest')}>newest</button>
+        <button onClick={() => handleSort('priceHighToLow')}>price: high-low</button>
+        <button onClick={() => handleSort('priceLowToHigh')}>price: low-high</button>
+      </>
+    )}
+  </div>
+</div>
       </div>
       <div className={styles.contaierWithAllSalesProducts}>
         {filteredProducts.map((el) => (
+          <Link to={`${frontendURL}/products/${el.id}`}>
           <div key={el.id} className={styles.containerWithProduct}>
             <div className={styles.containerWithImgAndSalesPercent}>
               <img src={`${baseURL}${el.image}`} alt={el.title} />
@@ -91,7 +127,9 @@ function AllSales({ products }) {
               </div>
             </div>
           </div>
+          </Link>
         ))}
+
       </div>
     </div>
   );

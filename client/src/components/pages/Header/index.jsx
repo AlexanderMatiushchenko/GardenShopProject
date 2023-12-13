@@ -18,7 +18,7 @@ function Header(){
                 <Link to={`${baseUrl}/`}><p>Main Page</p></Link>
                 <Link to={`${baseUrl}/categories/all`}><p>Categories</p></Link>
                 <Link to={`${baseUrl}/products/all`}><p>All products</p></Link>
-                <a href=""><p>All sales</p></a>
+                <Link to={`${baseUrl}/sales/all`}><p>All sales</p></Link>
             </div>
             <div className={styles.headerBasket}>
             {cartItemsSumme !==0 && cartItemsSumme !==undefined &&(

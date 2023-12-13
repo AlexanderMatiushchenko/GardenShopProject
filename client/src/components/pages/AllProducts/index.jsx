@@ -1,4 +1,4 @@
-// Ваш файл AllProducts.js
+
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addAction } from "../../../store/slices/cartSlice";

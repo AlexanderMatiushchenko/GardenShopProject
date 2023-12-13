@@ -109,3 +109,71 @@
 
 
     }
+    .sortBtnAndInputsContainer{
+        display: flex;
+        flex-direction: row;
+        
+        justify-content: center;
+     align-items: center;
+        gap: 2vw;
+        padding: 2vw;
+        h4{
+            color: var(--txt-black, #282828);
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+
+        }
+        input{
+            color: #8B8B8B;
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+
+            display: flex;
+width: 112px;
+padding: 8px 16px;
+align-items: center;
+gap: 10px;
+border-radius: 6px;
+border: 1px solid #DDD;
+        }
+    }
+    .containerWithSortBtn{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        color:  #282828;
+        padding: 2vw;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+
+
+    }
+    .sortBtns{
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+        button{
+            display: flex;
+            width: 200px;
+            padding: 8px 8px 8px 16px;
+            gap: 8px;
+            color:  #282828;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+        
+            border-radius: 6px;
+            border: 1px solid  #DDD;
+            cursor: pointer;
+        }
+
+
+}
