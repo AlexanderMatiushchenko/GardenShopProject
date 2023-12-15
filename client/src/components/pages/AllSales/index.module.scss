@@ -39,27 +39,7 @@
             border-radius: 12px;
             border: 1px solid #DDD;
         }
-        .discountPercent{
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
-            gap: 1vw;
-            border-radius:  6px;
-            background: #393;
-            position: absolute;
-            padding: 0.3vw;
-            right: 2vh;
-            top: 4vh;
-            p{
-                color: #FFF;
-                font-family: Montserrat;
-                font-size: 1vw;
-                font-style: normal;
-                font-weight: 600;
-
-            }
-
-        }
+        
         .containerWithPriceAndDiscountPrice{
             display: flex;
             flex-direction: row;
@@ -86,6 +66,30 @@
     .containerWithImgAndSalesPercent {
         padding: 2vw;
         border-bottom: 1px solid var(--grey-divider, #DDD);
+        button{
+            display: flex;
+            max-width: 15vw;
+            padding: 2vh 4vw;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            background: #393;
+            transition: background-color 0.3 ease,color 0.3 ease;
+            cursor: pointer;
+            position: absolute;
+            color:  #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2vh;
+    font-style: normal;
+    font-weight: 600;
+    
+            
+            }
+            button:hover{
+                background-color: #282828;
+                color: #DDD;
+            }
         
         
         img {
@@ -109,71 +113,6 @@
 
 
     }
-    .sortBtnAndInputsContainer{
-        display: flex;
-        flex-direction: row;
-        
-        justify-content: center;
-     align-items: center;
-        gap: 2vw;
-        padding: 2vw;
-        h4{
-            color: var(--txt-black, #282828);
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-
-        }
-        input{
-            color: #8B8B8B;
-font-family: Montserrat;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-
-            display: flex;
-width: 112px;
-padding: 8px 16px;
-align-items: center;
-gap: 10px;
-border-radius: 6px;
-border: 1px solid #DDD;
-        }
-    }
-    .containerWithSortBtn{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        position: relative;
-        color:  #282828;
-        padding: 2vw;
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-
-
-    }
-    .sortBtns{
-    position: absolute;
-    z-index: 1;
-    top: 10%;
-        button{
-            display: flex;
-            width: 200px;
-            padding: 8px 8px 8px 16px;
-            gap: 8px;
-            color:  #282828;
-            font-family: Montserrat;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-        
-            border-radius: 6px;
-            border: 1px solid  #DDD;
-            cursor: pointer;
-        }
-
-
-}
+    
+   
+   

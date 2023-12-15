@@ -29,8 +29,7 @@
 .headerBasket {
   position: relative;
 }
-
-.cartItemsSummeSign {
+.headerBasket .cartItemsSummeSign {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,8 +47,7 @@
   top: -10%;
   left: -15%;
 }
-
-p {
+.headerBasket p {
   color: white;
   text-align: center;
   font-family: Montserrat;

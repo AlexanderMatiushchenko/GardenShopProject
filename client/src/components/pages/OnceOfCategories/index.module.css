@@ -2,7 +2,7 @@
   font-family: "Montserrat";
   src: url("../../../fonts/Montserrat-VariableFont_wght.ttf");
 }
-.allSalesMain {
+.mainContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,7 +19,7 @@
           align-items: baseline;
   padding: 0 15vh 0 15vh;
 }
-.allSalesMain h1 {
+.mainContainer h1 {
   color: #282828;
   font-family: Montserrat;
   font-size: 4vw;
@@ -27,7 +27,7 @@
   font-weight: 700;
 }
 
-.contaierWithAllSalesProducts {
+.continerMainProduct {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,7 +70,7 @@
   border: 1px solid #DDD;
 }
 
-.containerWithPriceAndDiscountPrice {
+.priceContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,32 +78,76 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   gap: 2vw;
-  padding: 1vw;
 }
-.containerWithPriceAndDiscountPrice h2 {
+.priceContainer h2 {
   color: #282828;
   font-family: Montserrat;
   font-size: 2vw;
   font-style: normal;
   font-weight: 600;
 }
-.containerWithPriceAndDiscountPrice h3 {
-  color: var(--txt-grey, #8B8B8B);
+.priceContainer p {
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 1vw;
+  font-style: normal;
+  word-wrap: normal;
+  font-weight: 500;
+}
+
+.titleAndPriceContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2vw;
+  padding: 2vh;
+}
+.titleAndPriceContainer h3 {
+  color: #8B8B8B;
   font-family: Montserrat;
   font-size: 1.2vw;
   font-style: normal;
   font-weight: 500;
 }
 
-.containerWithImgAndSalesPercent {
+.containerWithImgAndBtn {
   padding: 2vw;
-  border-bottom: 1px solid var(--grey-divider, #DDD);
+  border-bottom: 1px solid #DDD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.containerWithImgAndSalesPercent button {
+.containerWithImgAndBtn img {
+  width: 15vw;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+.containerWithImgAndBtn button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,26 +172,7 @@
   font-style: normal;
   font-weight: 600;
 }
-.containerWithImgAndSalesPercent button:hover {
+.containerWithImgAndBtn button:hover {
   background-color: #282828;
   color: #DDD;
-}
-.containerWithImgAndSalesPercent img {
-  width: 15vw;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 12px;
-}
-
-.containerWithProdukTitleAndPrice {
-  padding: 2vh;
-}
-.containerWithProdukTitleAndPrice p {
-  color: #282828;
-  font-family: Montserrat;
-  font-size: 1vw;
-  font-style: normal;
-  word-wrap: normal;
-  font-weight: 500;
 }

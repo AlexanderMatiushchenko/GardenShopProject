@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../fonts/Montserrat-VariableFont_wght.ttf');    
+  }
+  @mixin schoppingCartH1Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2vw;
+  
+    h1{
+        color: #282828;
+        font-family: Montserrat;
+        font-size: 5vh;
+        font-style: normal;
+        font-weight: 700;
+        padding-right: 2vw;
+  
+    }
+    div{
+        width: 40vw;
+        height: 1px;
+        background: #DDD;
+    }
+    button{
+        display: flex;
+        padding: 1vh 1vh;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        border: 1px solid  #DDD;
+        color: rgba(139, 139, 139, 1);
+        background-color: #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 0.7vw;
+        font-style: normal;
+        font-weight: 500;
+        
+    }}
+
+.container{
+
+    @include schoppingCartH1Container;
+  }
+  .emptyCartPandButton{
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vw;
+        p{
+         
+          color: #282828;
+          text-overflow: ellipsis;
+          font-family: Montserrat;
+          font-size: 1vw;
+          font-style: normal;
+          font-weight: 500;
+          
+        }
+        button{
+          display: flex;
+          border: none;
+          padding: 1vw 3vw;
+          justify-content: center;
+          align-items: center;
+          border-radius:  6px;
+          background: #393;
+          color:  #FFF;
+          text-align: center;
+          font-family: Montserrat;
+          font-size: 1vw;
+          font-style: normal;
+          font-weight: 600;
+          cursor: pointer;
+  
+        }
+  }
+
+
+
+
+
+
+
+
+
+/* Styles for 1024px */
+@media screen and (max-width: 1024px) {
+.container{
+    div{
+      max-width: 25vw;
+      
+    }
+
+     h1{
+      font-size: 4vw;
+      padding: 0;
+     }
+     button{
+      max-width: 15vw;
+      max-height: auto;
+      font-size: 0.7vh;
+     }
+   }
+}
+
+ /* Styles for 768 px*/
+ @media screen and (max-width: 768px) {
+.container{
+    gap: 2vh;
+   flex-direction: column;
+     h1{
+      font-size: 6vw;
+     }
+   }
+   .emptyCartPandButton{
+     align-items: center;
+     max-width: 90vw;
+     p{
+       font-size: 2vh;
+     }
+     button{
+       font-size: 2vh;
+       width: 40vw;
+       height: 8vh;
+     }
+   }
+}

@@ -28,11 +28,11 @@ function AllProducts({ products }) {
               <h3>{product.title}</h3>
               {product.discont_price !== null ? (
                 <>
-                  <h2>${product.discont_price}</h2>
-                  <p><del>${product.price}</del></p>
+                  <h2>{product.discont_price} €</h2>
+                  <p><del>{product.price} €</del></p>
                 </>
               ) : (
-                <h2>${product.price}</h2>
+                <h2>{product.price} €</h2>
               )}
             </div>
           </div>

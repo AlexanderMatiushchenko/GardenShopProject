@@ -7,6 +7,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2vw;
 
   h1{
       color: #282828;
@@ -49,47 +50,27 @@
     gap: 2vh;
    
 }
-.container{
 
+.containerWithH1ShoppingCart{
   @include schoppingCartH1Container;
 }
-.emptyCartPandButton{
-  padding-top: 2vh;
+.containerWithProduct{
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2vw;
-      p{
-       
-        color: #282828;
-        text-overflow: ellipsis;
-        font-family: Montserrat;
-        font-size: 1vw;
-        font-style: normal;
-        font-weight: 500;
-        
+  flex-direction: row;
+  padding: 2vh;
+  position: relative;
+  gap: 2vh;
+  border-radius:  12px;
+  border: 1px solid  #DDD;
+  background:cover no-repeat;
+      img{
+          max-width: 20%;
+          max-height: auto;
+          object-fit: cover;
+          border-radius: 12px;
+          border: 1px solid  #DDD;
       }
-      button{
-        display: flex;
-        border: none;
-        padding: 1vw 3vw;
-        justify-content: center;
-        align-items: center;
-        border-radius:  6px;
-        background: #393;
-        color:  #FFF;
-        text-align: center;
-        font-family: Montserrat;
-        font-size: 1vw;
-        font-style: normal;
-        font-weight: 600;
-        cursor: pointer;
-
-      }
-}
-.continerwithH1ShoppingCart{
-  @include schoppingCartH1Container;
-}
+  }
 
 .containerWithProductAndInputsForm{
 display: flex;
@@ -98,117 +79,7 @@ gap: 32px;
 max-width: 80vw;
 }
 
-.containerwithProductCounter{
-display: flex;
-flex-direction: row;
-    h3{
-        display: flex;
-        width: 3vw;
-        height: auto;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-        border-top: 1px solid #DDD;
-        border-bottom: 1px solid #DDD;
-    }
-    
-button{
-    display: flex;
-    width: 4vw;
-    height: 4vw;
-    font-size: 3vw;
-    font-weight: 100;
-    color: rgba(139, 139, 139, 1);
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    border-radius: 6px;
-    border: 1px solid  #DDD;
-}
-}
-.containerWithProduct{
-display: flex;
-flex-direction: row;
-padding: 2vh;
-position: relative;
-gap: 2vh;
-border-radius:  12px;
-border: 1px solid  #DDD;
-background:cover no-repeat;
-    img{
-        max-width: 20%;
-        max-height: auto;
-        object-fit: cover;
-        border-radius: 12px;
-        border: 1px solid  #DDD;
-    }
-}
-.containerWithOrderDetails{
-display: flex;
-max-width: 30vw;
-padding: 2vw;
-flex-direction: column;
-align-items: flex-start;
-gap: 1.5vw;
-border-radius: 12px;
-background:  #F1F3F4;
 
-    input{
-        display: flex;
-        padding: 1.5vh 3vh;
-        align-items: center;
-        gap: 1vh;
-        align-self: stretch;
-        border-radius:  6px;
-        border: 1px solid  #DDD;
-        background:  #FFF;
-        color: #8B8B8B;
-        font-family: Montserrat;
-        font-size: 2.3vh;
-        font-style: normal;
-        font-weight: 500;
-    }
-    button{
-        display: flex;
-        padding: 1.5vh 3vh;
-        justify-content: center;
-        align-items: center;
-        align-self: stretch;
-        border-radius:  6px;
-        background: #393;
-        color:  #FFF;
-        text-align: center;
-        font-family: Montserrat;
-        font-size: 2.3vh    ;
-        font-style: normal;
-        font-weight: 600;
-        border: none;
-    }
-    h2{
-        color:  #282828;
-        font-family: Montserrat;
-        font-size: 4vh;
-        font-style: normal;
-        font-weight: 700;
-    }
-    h3{
-        color:  #8B8B8B;
-        font-family: Montserrat;
-        font-size: 4vh;
-        font-style: normal;
-        font-weight: 500;
-    }
-    h1{
-        color: #282828;
-        font-family: Montserrat;
-        font-size: 6vh;
-        font-style: normal;
-        font-weight: 700;
-    }
-}
 .containerWithPriceAndCounter{
 display: flex;
 flex-direction: row-reverse;
@@ -266,7 +137,6 @@ gap: 2vh;
 flex-direction: column;
 justify-content: space-between;
 align-items: flex-start;
-// flex-shrink: 0;
 gap: 1vh;
 
 }
@@ -285,22 +155,7 @@ gap: 1vh;
       padding: 0vw 15vw 4vw 15vw;
       gap: 1vh;
     }
-    .container{
-      div{
-        max-width: 25vw;
-        
-      }
   
-       h1{
-        font-size: 4vw;
-        padding: 0;
-       }
-       button{
-        max-width: 15vw;
-        max-height: auto;
-        font-size: 0.7vh;
-       }
-     }
      .emptyCartPandButton{
   justify-content: baseline;
        max-width: 80vw;
@@ -314,7 +169,7 @@ gap: 1vh;
        }
      }
   
-    .continerwithH1ShoppingCart {
+     .containerWithH1ShoppingCart {
         padding-top:  1vh;
       h1 {
         font-size: 4vw;
@@ -330,20 +185,12 @@ gap: 1vh;
       gap: 16px;
     }
   
-    .containerwithProductCounter {
-      h3 {
-        width: 5vw;
-      }
-  
-      button {
-        width: 5vw;
-        height: 5vw;
-      }
-    }
+    
   
     .containerWithProduct {
       padding: 1vh;
       gap: 1vh;
+    
   
       img {
         max-width: 30%;
@@ -427,26 +274,8 @@ gap: 1vh;
 
         }
     }
-    .container{
-     gap: 2vh;
-    flex-direction: column;
-      h1{
-       font-size: 6vw;
-      }
-    }
-    .emptyCartPandButton{
-      align-items: center;
-      max-width: 90vw;
-      p{
-        font-size: 2vh;
-      }
-      button{
-        font-size: 2vh;
-        width: 40vw;
-        height: 8vh;
-      }
-    }
-    .continerwithH1ShoppingCart {
+    
+    .containerWithH1ShoppingCart {
         h1 {
             font-size: 4.5vw;
         }
@@ -464,17 +293,7 @@ gap: 1vh;
         gap: 12px;
     }
 
-    .containerwithProductCounter {
-        h3 {
-            width: 6vw;
-        }
-
-        button {
-          
-            width: 6vw;
-            height: 6vw;
-        }
-    }
+ 
 
     .containerWithProduct {
         padding: 0.5vh;

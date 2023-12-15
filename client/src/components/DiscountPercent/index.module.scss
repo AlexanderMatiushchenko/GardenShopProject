@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../fonts/Montserrat-VariableFont_wght.ttf');
+  }
+ 
+  @mixin discount ($customRight, $customTop) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1vw;
+    border-radius: 6px;
+    background: #393;
+    position: absolute;
+    padding: 0.3vw;
+    right: $customRight;
+    top:$customTop ;
+  
+    p {
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 1vw;
+      font-style: normal;
+      font-weight: 600;
+    }
+  }
+  
+  .discountPercentContainer {
+    @include discount($customRight: 2vw, $customTop: 1.5vw);
+  }

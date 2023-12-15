@@ -12,6 +12,7 @@ import Basket from './components/pages/Basket';
 import ProductsRender from './components/ProductsRender';
 import AllSalesRender from './components/AllSalesRender';
 import ItemRender from './components/ItemRender';
+import OnceOfCategoriesRender from './components/OnceOfCategoriesRender';
 function App() {
 
   return (
@@ -19,18 +20,23 @@ function App() {
      
     
       <Header />
+      {/* <ProductsRender />
+      <CategoriesRender /> */}
+      {/* <OnceOfCategoriesRender /> */}
+      
       <Routes>
         <Route path='/cart' element={<Basket />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/categories/all" element={<CategoriesRender />} />
         <Route path='/products/all' element={<ProductsRender />} />
         <Route path = '/sales/all' element = {<AllSalesRender />} />  
-        <Route path="/products/:id" element={<OneItem />} />       
+        <Route path="/products/:id" element={<OneItem />} />   
+        <Route path="/categories/:id" element={<OnceOfCategoriesRender />} />          
         <Route path ='*' element={<ErrorPage />} />
       </Routes>
      {/* <ItemRender /> */}
 
-      <Contact />
+      <Contact /> 
     </>
   );
 }

@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
+}
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2vw;
+}
+.container h1 {
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 5vh;
+  font-style: normal;
+  font-weight: 700;
+  padding-right: 2vw;
+}
+.container div {
+  width: 40vw;
+  height: 1px;
+  background: #DDD;
+}
+.container button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1vh 1vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  border: 1px solid #DDD;
+  color: rgb(139, 139, 139);
+  background-color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 0.7vw;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.emptyCartPandButton {
+  padding-top: 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2vw;
+}
+.emptyCartPandButton p {
+  color: #282828;
+  text-overflow: ellipsis;
+  font-family: Montserrat;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 500;
+}
+.emptyCartPandButton button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  padding: 1vw 3vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  background: #393;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Styles for 1024px */
+@media screen and (max-width: 1024px) {
+  .container div {
+    max-width: 25vw;
+  }
+  .container h1 {
+    font-size: 4vw;
+    padding: 0;
+  }
+  .container button {
+    max-width: 15vw;
+    max-height: auto;
+    font-size: 0.7vh;
+  }
+}
+/* Styles for 768 px*/
+@media screen and (max-width: 768px) {
+  .container {
+    gap: 2vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container h1 {
+    font-size: 6vw;
+  }
+  .emptyCartPandButton {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 90vw;
+  }
+  .emptyCartPandButton p {
+    font-size: 2vh;
+  }
+  .emptyCartPandButton button {
+    font-size: 2vh;
+    width: 40vw;
+    height: 8vh;
+  }
+}

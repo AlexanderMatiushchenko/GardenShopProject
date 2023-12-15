@@ -1,0 +1,36 @@
+.containerWithSortBtn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    color:  #282828;
+    padding: 2vw;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+
+.sortBtns{
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    select {
+            display: flex;
+            width: 200px;
+            padding: 8px 8px 8px 16px;
+            gap: 8px;
+            color:  #282828;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+        
+            border-radius: 6px;
+            border: 1px solid  #DDD;
+            cursor: pointer;
+        }
+
+
+}
+
+}

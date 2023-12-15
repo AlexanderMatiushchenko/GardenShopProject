@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
+}
+.containerWithProductCounter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.containerWithProductCounter h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 3vw;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+}
+.containerWithProductCounter button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 4vw;
+  height: 4vw;
+  font-size: 3vw;
+  font-weight: 100;
+  color: rgb(139, 139, 139);
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid #DDD;
+  cursor: pointer;
+}
+
+/* Styles for 1024px */
+.containerwithProductCounter h3 {
+  width: 5vw;
+}
+.containerwithProductCounter button {
+  width: 5vw;
+  height: 5vw;
+}
+
+/* Styles for 768 px*/
+.containerwithProductCounter h3 {
+  width: 6vw;
+}
+.containerwithProductCounter button {
+  width: 6vw;
+  height: 6vw;
+}
