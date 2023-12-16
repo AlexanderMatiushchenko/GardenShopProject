@@ -16,11 +16,6 @@
   font-style: normal;
   font-weight: 600;
 }
-.containerWithSortBtn .sortBtns {
-  position: absolute;
-  z-index: 1;
-  top: 10%;
-}
 .containerWithSortBtn .sortBtns select {
   display: -webkit-box;
   display: -ms-flexbox;

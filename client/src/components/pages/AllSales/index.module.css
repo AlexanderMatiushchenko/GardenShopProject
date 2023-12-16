@@ -101,6 +101,16 @@
 
 .containerWithImgAndSalesPercent {
   padding: 2vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-bottom: 1px solid var(--grey-divider, #DDD);
 }
 .containerWithImgAndSalesPercent button {

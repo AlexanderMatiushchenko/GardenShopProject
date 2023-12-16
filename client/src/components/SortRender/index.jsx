@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.module.css';
 
-function SortRender({ selectedSortOption, sortDirection, isActiveSortOptions, handleSort, toggleSortOptions }) {
+function SortRender({ selectedSortOption, isActiveSortOptions, handleSort, toggleSortOptions }) {
   return (
     <div className={styles.containerWithSortBtn}>
       <div className={styles.sortBtns + (isActiveSortOptions ? ` ${styles.active}` : '')}>
@@ -11,7 +11,6 @@ function SortRender({ selectedSortOption, sortDirection, isActiveSortOptions, ha
           <option value="priceHighToLow">price: high-low</option>
           <option value="priceLowToHigh">price: low-high</option>
         </select>
-        
       </div>
     </div>
   );

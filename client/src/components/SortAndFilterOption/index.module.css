@@ -26,7 +26,8 @@
   font-style: normal;
   font-weight: 600;
 }
-.sortBtnAndInputsContainer input {
+
+.sortInp {
   color: #8B8B8B;
   font-family: Montserrat;
   font-size: 16px;

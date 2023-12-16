@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 import { Link } from "react-router-dom";
 import DiscountPercent from "../../DiscountPercent";
 import SortAndFilterOption from "../../SortAndFilterOption";
@@ -8,33 +8,22 @@ import sortProducts from "../../../utils/api";
 import { addAction } from "../../../store/slices/cartSlice";
 import { useDispatch } from "react-redux";
 
-
-function OnceOfCategories({products,categories}){
-    const baseURL = "http://localhost:3333";
-    const frontendURL = 'http://localhost:3000';
-  const {id} = useParams();
-  const filteredProductsFromCategory = products.filter((el) => el.categoryId === parseInt(id));
-
+function OnceOfCategories({ products }) {
+  const baseURL = "http://localhost:3333";
+  const frontendURL = "http://localhost:3000";
+  const { id } = useParams();
   const dispatch = useDispatch();
-  const handleAddToCart = (products) => {
-    dispatch(addAction(products)); 
-    console.log("Product added to cart:", products);
-  };
 
-  const [sortBy, setSortBy] = useState('default');
-  const [selectedSortOption, setSelectedSortOption] = useState('default');
-  const [priceFrom, setPriceFrom] = useState('');
-  const [priceTo, setPriceTo] = useState('');
+  const [sortBy, setSortBy] = useState("default");
+  const [selectedSortOption, setSelectedSortOption] = useState("default");
+  const [priceFrom, setPriceFrom] = useState("");
+  const [priceTo, setPriceTo] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [isActiveSortOptions, setIsActiveSortOptions] = useState(false);
-  const [sortDirection, setSortDirection] = useState('down');
-  useEffect(() => {
-   
-  }, [ products, sortBy, priceFrom, priceTo, sortDirection]);
 
   useEffect(() => {
-    const filteredItems = products.filter((el) => el.discont_price !== null);
-    const sortedItems = sortProducts(filteredItems, sortBy, sortDirection);
+    const filteredItems = products.filter((el) => el.price);
+    const sortedItems = sortProducts(filteredItems, sortBy);
 
     if (priceFrom && priceTo) {
       const filteredAndSortedItems = sortedItems.filter(
@@ -45,9 +34,7 @@ function OnceOfCategories({products,categories}){
     } else {
       setFilteredProducts(sortedItems);
     }
-
-    
-  }, [products, sortBy, priceFrom, priceTo, sortDirection]);
+  }, [products, sortBy, priceFrom, priceTo]);
 
   const handleSort = (option) => {
     setSortBy(option);
@@ -60,12 +47,14 @@ function OnceOfCategories({products,categories}){
     setPriceTo(to);
   };
 
-  const toggleSortOptions = () => {
-    setIsActiveSortOptions(!isActiveSortOptions);
-    setSortDirection(sortDirection === 'down' ? 'up' : 'down');
+  const handleAddToCart = (product) => {
+    dispatch(addAction(product));
+    console.log("Product added to cart:", product);
   };
 
-  
+  const productsToDisplay = filteredProducts.filter((product) => product.categoryId === parseInt(id));
+
+    
 
 
   return (
@@ -75,13 +64,10 @@ function OnceOfCategories({products,categories}){
         priceTo={priceTo}
         handlePriceFilterChange={handlePriceFilterChange}
         handleSort={handleSort}
-        toggleSortOptions={toggleSortOptions}
         selectedSortOption={selectedSortOption}
-        sortDirection={sortDirection}
-        isActiveSortOptions={isActiveSortOptions}
       />
     <div className={styles.continerMainProduct}>
-      {filteredProductsFromCategory.map((el) => (
+      {productsToDisplay.map((el) => (
         
         <div className={styles.containerWithProduct} key={el.id}>
             <div className={styles.containerWithImgAndBtn} >

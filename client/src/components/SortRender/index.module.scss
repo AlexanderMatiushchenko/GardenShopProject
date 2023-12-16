@@ -11,9 +11,6 @@ font-style: normal;
 font-weight: 600;
 
 .sortBtns{
-    position: absolute;
-    z-index: 1;
-    top: 10%;
     select {
             display: flex;
             width: 200px;
@@ -29,7 +26,6 @@ font-weight: 600;
             border: 1px solid  #DDD;
             cursor: pointer;
         }
-
 
 }
 

@@ -17,7 +17,7 @@ function AllSales({ products }) {
   const [priceTo, setPriceTo] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [isActiveSortOptions, setIsActiveSortOptions] = useState(false);
-  const [sortDirection, setSortDirection] = useState('down');
+  
 
   const dispatch = useDispatch();
   const handleAddToCart = (products) => {
@@ -25,14 +25,12 @@ function AllSales({ products }) {
     console.log("Product added to cart:", products);
   };
 
-
-
   useEffect(() => {
 
-  }, [products, sortBy, priceFrom, priceTo, sortDirection]);
+  }, [products, sortBy, priceFrom, priceTo]);
   useEffect(() => {
     const filteredItems = products.filter((el) => el.discont_price !== null);
-    const sortedItems = sortProducts(filteredItems, sortBy, sortDirection);
+    const sortedItems = sortProducts(filteredItems, sortBy);
 
     if (priceFrom && priceTo) {
       const filteredAndSortedItems = sortedItems.filter(
@@ -45,7 +43,7 @@ function AllSales({ products }) {
     }
 
     setOnlySalesItems(filteredItems);
-  }, [products, sortBy, priceFrom, priceTo, sortDirection]);
+  }, [products, sortBy, priceFrom, priceTo]);
 
   const handleSort = (option) => {
     setSortBy(option);
@@ -58,10 +56,7 @@ function AllSales({ products }) {
     setPriceTo(to);
   };
 
-  const toggleSortOptions = () => {
-    setIsActiveSortOptions(!isActiveSortOptions);
-    setSortDirection(sortDirection === 'down' ? 'up' : 'down');
-  };
+  
 
   return (
     <div className={styles.allSalesMain}>
@@ -72,9 +67,7 @@ function AllSales({ products }) {
         priceTo={priceTo}
         handlePriceFilterChange={handlePriceFilterChange}
         handleSort={handleSort}
-        toggleSortOptions={toggleSortOptions}
         selectedSortOption={selectedSortOption}
-        sortDirection={sortDirection}
         isActiveSortOptions={isActiveSortOptions}
       />
       <div className={styles.contaierWithAllSalesProducts}>

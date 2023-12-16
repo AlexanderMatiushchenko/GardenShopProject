@@ -27,15 +27,15 @@
 }
 .containerWithProduct{
     display: flex;
-            position: relative;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 20vw;
-            min-height: 40vh;
-            align-self: stretch;
-            border-radius: 12px;
-            border: 1px solid #DDD;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    min-height: 40vh;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px solid #DDD;
             
 }
 
@@ -84,11 +84,12 @@ p{
 }
     
 .containerWithImgAndBtn {
+position: relative;
 padding: 2vw;
 border-bottom: 1px solid  #DDD;
 display: flex;
 justify-content: center;
-align-items: center;
+align-items: flex-end;
 
 
 img {
@@ -111,13 +112,11 @@ button{
     cursor: pointer;
     position: absolute;
     color:  #FFF;
-text-align: center;
-font-family: Montserrat;
-font-size: 2vh;
-font-style: normal;
-font-weight: 600;
-
-    
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2vh;
+    font-style: normal;
+    font-weight: 600;
     }
     button:hover{
         background-color: #282828;

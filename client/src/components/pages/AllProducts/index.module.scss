@@ -46,22 +46,22 @@ font-weight: 700;
         border-radius: 10px;
         }
         button{
-        display: flex;
-        max-width: 15vw;
-        padding: 2vh 4vw;
-        justify-content: center;
-        align-items: center;
-        border-radius: 6px;
-        background: #393;
-        transition: background-color 0.3 ease,color 0.3 ease;
-        cursor: pointer;
-        position: absolute;
-        color:  #FFF;
-text-align: center;
-font-family: Montserrat;
-font-size: 2vh;
-font-style: normal;
-font-weight: 600;
+            display: flex;
+            max-width: 15vw;
+            padding: 2vh 4vw;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            background: #393;
+            transition: background-color 0.3 ease,color 0.3 ease;
+            cursor: pointer;
+            position: absolute;
+            color:  #FFF;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 2vh;
+            font-style: normal;
+            font-weight: 600;
 
         
         }

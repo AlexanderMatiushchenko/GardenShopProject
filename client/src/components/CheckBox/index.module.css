@@ -1,0 +1,76 @@
+/* styles.module.css */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
+}
+.checkBoxContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.checkBoxContainer label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.chBoxNative {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+}
+
+.chBoxCustom {
+  display: inline-block;
+  position: relative;
+  width: 1.5vw;
+  height: 1.5vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  border: 1px solid #DDD;
+  margin-left: 1vw;
+  cursor: pointer;
+}
+
+.chBoxCustom::before {
+  content: " ";
+  display: inline-block;
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 6px;
+  background-image: url(../../assets/checkbox/check\ box=active.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  margin-top: 1px;
+  -webkit-transition: 0.2 ease-in;
+  transition: 0.2 ease-in;
+}
+
+.chBoxNative:checked + .chBoxCustom::before {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
