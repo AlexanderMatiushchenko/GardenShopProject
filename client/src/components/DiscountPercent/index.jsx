@@ -1,15 +1,13 @@
+
 import React from 'react';
 import styles from './index.module.css';
 
-function DiscountPercent({ discountedItem }) {
-  const { discont_price, price } = discountedItem;
-
-  
-  if (discont_price === null || discont_price === undefined) {
+function DiscountPercent({ discontPrice, price }) {
+  if (discontPrice === null || discontPrice === undefined || discontPrice >= price) {
     return null;
   }
 
-  const percent = ((price - discont_price) / price) * 100;
+  const percent = ((price - discontPrice) / price) * 100;
 
   return (
     <div className={styles.discountPercentContainer}>

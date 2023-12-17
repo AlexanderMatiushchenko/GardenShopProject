@@ -76,8 +76,9 @@ function AllSales({ products }) {
             <div className={styles.containerWithProduct}>
               <div className={styles.containerWithImgAndSalesPercent}>
                 <img src={`${baseURL}${el.image}`} alt={el.title} />
+                
                 <button onClick={() => handleAddToCart(products)}>Add to cart</button>
-                <DiscountPercent discountedItem={el} />
+                <DiscountPercent discontPrice={el.discont_price} price={el.price} />
               </div>
               <Link to={`${frontendURL}/products/${el.id}`} key={el.id}>
               <div className={styles.containerWithProdukTitleAndPrice}>

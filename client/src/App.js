@@ -13,6 +13,7 @@ import ProductsRender from './components/ProductsRender';
 import AllSalesRender from './components/AllSalesRender';
 import ItemRender from './components/ItemRender';
 import OnceOfCategoriesRender from './components/OnceOfCategoriesRender';
+import CategoriesCarousel  from './components/Carousel';
 function App() {
 
   return (
@@ -23,7 +24,7 @@ function App() {
       {/* <ProductsRender />
       <CategoriesRender /> */}
       {/* <OnceOfCategoriesRender /> */}
-      
+    {/* <CategoriesCarousel /> */}
       <Routes>
         <Route path='/cart' element={<Basket />} />
         <Route path="/" element={<HomePage />} />
