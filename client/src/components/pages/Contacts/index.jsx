@@ -26,7 +26,8 @@ function Contact(){
                     <h2 className={styles.contactH2}>24 hours a day</h2>
                 </div>
             </div>
-            <img className={styles.mapImg} src={map} alt="map" />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.4095605980733!2d13.370224492988218!3d52.50792676508404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851cbdeaf3909%3A0x6a061918b5f3ff91!2sLinkstra%C3%9Fe%202%2F8%20OG%2C%2010%2C%2010785%20Berlin!5e0!3m2!1sde!2sde!4v1703019036389!5m2!1sde!2sde" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            {/* <img className={styles.mapImg} src={map} alt="map" /> */}
         </div>
     )
 }

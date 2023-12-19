@@ -8,6 +8,7 @@
   flex-direction: column;
 justify-content: space-around;
 align-items: center;
+button{  cursor: pointer;}
 }
 .divWithLineAndButtonAllCategories{
   display: flex;
@@ -48,16 +49,29 @@ border-radius: var(--radius-small, 6px);
 border: 1px solid var(--grey-divider, #DDD);
 }
 .divWithCheckoutBtn {
-  background: url("../../../assets/homepage/img1.svg") ;
-  // transform: scaleX(-1);
+  position: relative;
+  padding: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
   width: 1440px;
-height: 600px;
-flex-shrink: 0;
+  height: 600px;
+  flex-shrink: 0;
 }
+
+.divWithCheckoutBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../../../assets/homepage/img1.svg");
+  transform: scaleX(-1);
+  z-index: -1;
+}
+
 .sale{
   display: flex;
   flex-direction: row;
@@ -74,6 +88,7 @@ line-height: 110%; /* 70.4px */
 
   button{
     display: flex;
+
 padding: 8px 16px;
 justify-content: center;
 align-items: center;
@@ -107,15 +122,6 @@ font-weight: 700;
 line-height: 110%; /* 105.6px */
 }
   
-.smallCategories {
-  
-}
-.discountForm {
-  
-}
-.sales {
-  
-}
 .conteinerDiscountForm {
 display: inline-flex;
 padding: 32px 32px 0px 32px;
@@ -135,61 +141,76 @@ line-height: 110%; /* 70.4px */
 align-self: stretch;
   }
 }
-.discountForm{
-display: flex;
-flex-direction: column;
-padding: 16px 32px;
-align-items: center;
-gap: 10px;
-align-self: stretch;
-input{
-  background-color: #0B710B;
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%; /* 26px */
-    display: flex;
-    padding: 16px 32px;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-    border-radius: 6px;
-border: 1px solid  #FFF;
 
-}
-input::placeholder {
-  color:  #FFF;
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%; /* 26px */
-
-}
-
-}
 .imgAndInputWithBtn{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  button{
-color: #282828;
-text-align: center;
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-line-height: 130%; /* 26px */
-width: 516px;
-padding: 16px 32px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 6px;
-background:  #FFF;
+
+}
+del{
+  color: black;
 }
 
-  
-}
+
+
+
+
+
+
+
+
+
+
+.discountForm{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    input{
+      background-color: #0B710B;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%; /* 26px */
+        display: flex;
+        padding: 16px 32px;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 6px;
+    border: 1px solid  #FFF;
+    
+    }
+    input::placeholder {
+      color:  #FFF;
+      font-family: Montserrat;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%; /* 26px */
+    
+    }
+    button{
+        color: #282828;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%; /* 26px */
+        width: 516px;
+        padding: 16px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 6px;
+        background:  #FFF;
+        }
+        
+    
+    }

@@ -6,9 +6,11 @@ import styles from "./index.module.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAllProducts } from '../../store/slices/productsSlice';
 import DiscountPercent from '../DiscountPercent';
+import { Link } from 'react-router-dom';
 
 function DiscountCarousel() {
   const baseUrl = "http://localhost:3333";
+  const frontendUrl = "http://localhost:3000"
   const dispatch = useDispatch();
  
 
@@ -24,6 +26,7 @@ return (
         
       <Carousel id={styles.carousel} autoplay  dots={false}  slidesToShow={4}>
         {filteredDiscountedProducts.map((el) => (
+          <Link to={`${frontendUrl}/products/${el.id}`}>
           <div key={el.id} className={styles.contentStyle}>
             <DiscountPercent discontPrice={el.discont_price} price={el.price} />
             <img src={`${baseUrl}${el.image}`} alt={el.title} />
@@ -33,6 +36,7 @@ return (
             <del><h4>{el.price} €</h4></del>
             </div>
           </div>
+          </Link>
         ))}
       </Carousel>
     </div>

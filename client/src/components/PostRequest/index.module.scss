@@ -1,0 +1,52 @@
+.discountForm{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    input{
+      background-color: #0B710B;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%; /* 26px */
+        display: flex;
+        padding: 16px 32px;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 6px;
+    border: 1px solid  #FFF;
+    
+    }
+    input::placeholder {
+      color:  #FFF;
+      font-family: Montserrat;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%; /* 26px */
+    
+    }
+    button{
+        color: #282828;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%; /* 26px */
+        width: 516px;
+        padding: 16px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 6px;
+        background:  #FFF;
+        }
+        
+    
+    }

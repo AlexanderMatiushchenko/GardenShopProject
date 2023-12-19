@@ -25,12 +25,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 15vw;
-  max-height: auto;
+  padding-bottom: 3vw;
 }
 .contentStyle img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 17vw;
+  height: 12vw;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 12px;

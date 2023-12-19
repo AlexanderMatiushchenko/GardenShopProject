@@ -4,11 +4,6 @@
     
   }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .contactMain{
 display: inline-flex;
 padding: 0vw 15vw 4vh 15vw;
@@ -140,4 +135,9 @@ font-weight: 600;
         padding: 1vh;
     }
    
+}
+iframe{
+width: 68vw;
+height: 20vw;
+border: none;
 }

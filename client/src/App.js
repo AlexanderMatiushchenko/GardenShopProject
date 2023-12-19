@@ -13,7 +13,8 @@ import ProductsRender from './components/ProductsRender';
 import AllSalesRender from './components/AllSalesRender';
 import ItemRender from './components/ItemRender';
 import OnceOfCategoriesRender from './components/OnceOfCategoriesRender';
-import CategoriesCarousel  from './components/Carousel';
+import CategoriesCarousel  from './components/CategoriesCarousel';
+
 function App() {
 
   return (
@@ -21,6 +22,7 @@ function App() {
      
     
       <Header />
+    
       {/* <ProductsRender />
       <CategoriesRender /> */}
       {/* <OnceOfCategoriesRender /> */}

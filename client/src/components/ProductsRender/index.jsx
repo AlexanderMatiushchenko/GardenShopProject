@@ -4,7 +4,7 @@ import { fetchAllProducts } from "../../store/slices/productsSlice";
 import OneItem from "../ItemRender";
 import OnceOfCategoriesRender from "../OnceOfCategoriesRender";
 import AllProducts from "../pages/AllProducts";
-import ProductsCarousel from "../Carousel";
+
 
 function ProductsRender(){
     const dispatch = useDispatch();
@@ -13,9 +13,7 @@ function ProductsRender(){
     },[dispatch])
     const products = useSelector(({products}) =>products.list);
         return (
-        <>          <AllProducts products={products} />
-          <ProductsCarousel products={products} />
-          </>
+                <AllProducts products={products} />
 
       );
 
