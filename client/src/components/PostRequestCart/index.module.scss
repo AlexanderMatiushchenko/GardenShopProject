@@ -1,0 +1,119 @@
+.orderForm{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    input{
+        display: flex;
+        padding: 1.5vh 3vh;
+        align-items: center;
+        gap: 1vh;
+        align-self: stretch;
+        border-radius:  6px;
+        border: 1px solid  #DDD;
+        background:  #FFF;
+        color: #8B8B8B;
+        font-family: Montserrat;
+        font-size: 2.3vh;
+        font-style: normal;
+        font-weight: 500;
+    }
+    input::placeholder {
+      color: var(--txt-grey, #8B8B8B);
+      font-family: Montserrat;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%; /* 26px */
+    
+    }
+    button{
+      cursor: pointer;
+        display: flex;
+        padding: 1.5vh 3vh;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        border-radius:  6px;
+        background: #393;
+        color:  #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 2.3vh    ;
+        font-style: normal;
+        font-weight: 600;
+        border: none;
+    }
+
+    .btnAktiv{
+      display: flex;
+      padding: 1.5vh 3vh;
+justify-content: center;
+align-items: center;
+
+border-radius: 6px;
+background: #FFF;
+color:  #282828;
+text-align: center;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+
+    }
+    
+    }
+    .modal{
+      height: 30vh;
+      width: 60vh;
+      padding: 2vw;
+      border-radius:  12px;
+      background: rgba(51,153,51,0.9);
+      position: absolute;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-evenly;
+      top: 12vh; 
+      right: 30vw;
+
+  
+     
+      span{
+color: white;
+cursor: pointer;
+font-size: 2vw;
+font-weight: 700;
+      }
+
+    }
+
+    .modalContent{
+      display: flex;
+      justify-content: space-between;
+    }
+    .modalText{
+
+      display: flex;
+     align-items: flex-start;
+     justify-content: space-around;
+      flex-direction: column;
+      h5{
+        color: var(--txt-white, #FFF);
+font-family: Montserrat;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%; /* 44px */
+
+      }
+      p{
+        color: var(--txt-white, #FFF);
+        font-family: Montserrat;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%; /* 22px */
+      }
+    }

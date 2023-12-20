@@ -6,8 +6,6 @@ function PostRequest({ btnName }) {
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
 
   const nameInput = (event) => {
     setName(event.target.value);
@@ -23,12 +21,6 @@ function PostRequest({ btnName }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    if (isSubmitting) {
-      return; 
-    }
-
-    setIsSubmitting(true);
 
     const postData = {
       name: name,
@@ -46,35 +38,24 @@ function PostRequest({ btnName }) {
       });
 
       if (response.ok) {
-        setIsSuccessModalOpen(true);
-
-        setTimeout(() => {
-          setIsSuccessModalOpen(false);
-        }, 3000);
+       
+        setName("");
+        setPhoneNumber("");
+        setEmail("");
       }
     } catch (error) {
       console.error("Error:", error);
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
   return (
     <div>
       <form className={styles.discountForm} onSubmit={handleSubmit}>
-        <input type="text" placeholder="Name" onChange={nameInput} />
-        <input type="text" placeholder="Phone number" onChange={phoneNumberInput} />
-        <input type="text" placeholder="Email" onChange={emailInput} />
-        <button type="submit" disabled={isSubmitting}>
-          {btnName}
-        </button>
+        <input type="text" placeholder="Name" value={name} onChange={nameInput} />
+        <input type="text" placeholder="Phone number" value={phoneNumber} onChange={phoneNumberInput} />
+        <input type="text" placeholder="Email" value={email} onChange={emailInput} />
+        <button type="submit">{btnName}</button>
       </form>
-
-      {isSuccessModalOpen && (
-        <div className={styles.successModal}>
-          <p>Request successfully submitted!</p>
-        </div>
-      )}
     </div>
   );
 }

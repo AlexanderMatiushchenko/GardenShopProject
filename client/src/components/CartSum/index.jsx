@@ -1,6 +1,6 @@
   import React,{useState} from "react";
   import styles from "./index.module.css"
-  import PostRequest from "../PostRequest";
+  import PostRequestCart from "../PostRequestCart/index";
 
   const CartSum = ({ cartItems, handleRemoveItem }) => {
     const calculateItems = () => {
@@ -25,7 +25,7 @@
         <h3>{calculateItems()} items</h3>
         <h3>Total:</h3>
         <h1>{calculatePrice()} €</h1>
-        <PostRequest btnName={"Order"}/>
+        <PostRequestCart btnName={"Order"}/>
 
 
       </div>
