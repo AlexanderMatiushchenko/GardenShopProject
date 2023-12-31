@@ -26,7 +26,6 @@
   font-size: 3.3vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%; /* 70.4px */
   margin-left: -48vw;
 }
 
@@ -101,4 +100,37 @@
 .categoriesDivImgContainer img:hover {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
+}
+
+@media screen and (max-width: 1024px) {
+  .categoriesH1 {
+    margin-left: 0;
+    font-size: 3.5vw;
+  }
+  .categoriesH3 {
+    font-size: 2vw;
+  }
+  .categoriesDivImgContainer {
+    max-width: 30vw;
+    max-height: 25vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  .categoriesContainer {
+    gap: 5vh;
+  }
+  .categoriesH1 {
+    font-size: 4vw;
+  }
+  .categoriesH3 {
+    font-size: 4.5vw;
+  }
+  .categoriesDivImgContainer {
+    max-width: 30vw;
+    max-height: 20vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }

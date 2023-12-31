@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styles from "./index.module.css";
+import { backendURL } from "../../utils/var";
 
 function PostRequestCart({ btnName }) {
-  const baseUrl = "http://localhost:3333";
+ 
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
@@ -32,7 +33,7 @@ function PostRequestCart({ btnName }) {
     };
 
     try {
-      const response = await fetch(`${baseUrl}/sale/send`, {
+      const response = await fetch(`${backendURL}/sale/send`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

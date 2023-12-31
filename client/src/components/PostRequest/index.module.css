@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
+}
 .discountForm {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,31 +10,27 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 16px 32px;
+  padding: 0.8vw 2vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+  gap: 1vw;
 }
 .discountForm input {
   background-color: #0B710B;
   color: #FFF;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 1vw;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 16px 32px;
+  padding: 0.8vw 2vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: 1vw;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
@@ -40,60 +40,104 @@
 .discountForm input::-webkit-input-placeholder {
   color: #FFF;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 1vw;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
 }
 .discountForm input::-moz-placeholder {
   color: #FFF;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 1vw;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
 }
 .discountForm input:-ms-input-placeholder {
   color: #FFF;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 1vw;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
 }
 .discountForm input::-ms-input-placeholder {
   color: #FFF;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 1vw;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
 }
 .discountForm input::placeholder {
   color: #FFF;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 1vw;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
 }
 .discountForm button {
   color: #282828;
   text-align: center;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-style: normal;
   font-weight: 600;
-  line-height: 130%; /* 26px */
-  width: 516px;
-  padding: 16px 32px;
+  padding: 0.8vw 6vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: 1vw;
   border-radius: 6px;
   background: #FFF;
+}
+
+@media screen and (max-width: 1024px) {
+  .discountForm input {
+    font-size: 1.5vw;
+    padding: 1.5vw 3vw;
+  }
+  .discountForm input::-webkit-input-placeholder {
+    font-size: 1.5vw;
+  }
+  .discountForm input::-moz-placeholder {
+    font-size: 1.5vw;
+  }
+  .discountForm input:-ms-input-placeholder {
+    font-size: 1.5vw;
+  }
+  .discountForm input::-ms-input-placeholder {
+    font-size: 1.5vw;
+  }
+  .discountForm input::placeholder {
+    font-size: 1.5vw;
+  }
+  .discountForm button {
+    font-size: 1.8vw;
+    padding: 1.5vw 6vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .discountForm input {
+    font-size: 3vw;
+    padding: 2vw 4vw;
+  }
+  .discountForm input::-webkit-input-placeholder {
+    font-size: 3vw;
+  }
+  .discountForm input::-moz-placeholder {
+    font-size: 3vw;
+  }
+  .discountForm input:-ms-input-placeholder {
+    font-size: 3vw;
+  }
+  .discountForm input::-ms-input-placeholder {
+    font-size: 3vw;
+  }
+  .discountForm input::placeholder {
+    font-size: 3vw;
+  }
+  .discountForm button {
+    font-size: 3vw;
+    padding: 2vw 12vw;
+  }
 }

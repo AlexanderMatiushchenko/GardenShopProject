@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
+}
 .orderForm {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,11 +10,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 16px 32px;
+  padding: 1vh 2vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: 1vh;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
@@ -24,57 +28,49 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 1vh;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
   border-radius: 6px;
   border: 1px solid #DDD;
   background: #FFF;
   color: #8B8B8B;
   font-family: Montserrat;
-  font-size: 2.3vh;
+  font-size: 2vh;
   font-style: normal;
   font-weight: 500;
 }
 .orderForm input::-webkit-input-placeholder {
-  color: var(--txt-grey, #8B8B8B);
+  color: #8B8B8B;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 2vh;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
 }
 .orderForm input::-moz-placeholder {
-  color: var(--txt-grey, #8B8B8B);
+  color: #8B8B8B;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 2vh;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
 }
 .orderForm input:-ms-input-placeholder {
-  color: var(--txt-grey, #8B8B8B);
+  color: #8B8B8B;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 2vh;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
 }
 .orderForm input::-ms-input-placeholder {
-  color: var(--txt-grey, #8B8B8B);
+  color: #8B8B8B;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 2vh;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
 }
 .orderForm input::placeholder {
-  color: var(--txt-grey, #8B8B8B);
+  color: #8B8B8B;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 2vh;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
 }
 .orderForm button {
   cursor: pointer;
@@ -117,7 +113,7 @@
   color: #282828;
   text-align: center;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 2vh;
   font-style: normal;
   font-weight: 600;
 }
@@ -172,18 +168,47 @@
           flex-direction: column;
 }
 .modalText h5 {
-  color: var(--txt-white, #FFF);
+  color: #FFF;
   font-family: Montserrat;
-  font-size: 40px;
+  font-size: 3vh;
   font-style: normal;
   font-weight: 600;
-  line-height: 110%; /* 44px */
 }
 .modalText p {
-  color: var(--txt-white, #FFF);
+  color: #FFF;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 2vh;
   font-style: normal;
   font-weight: 600;
-  line-height: 110%; /* 22px */
+}
+
+@media screen and (max-width: 1024px) {
+  .orderForm {
+    padding: 0;
+  }
+  .orderForm input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.5vh 1vh;
+    max-width: 30vw;
+  }
+  .orderForm button {
+    padding: 0.5vh 1vh;
+    font-size: 2vh;
+  }
+  .modal {
+    height: 20vh;
+    width: 70vw;
+    top: 30vh;
+    right: 20vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal {
+    height: 20vh;
+    width: 70vw;
+    top: 530vh;
+    right: 15vw;
+  }
 }

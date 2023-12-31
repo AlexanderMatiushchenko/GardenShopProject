@@ -2,13 +2,31 @@
   font-family: "Montserrat";
   src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
+}
 #carousel {
   max-width: 100vw;
-  gap: 2vw;
   padding: 2vh 15vw 2vh 15vw;
 }
 #carousel button {
   background: black;
+}
+
+.containerWithImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  padding: 2vh;
+  border-bottom: 1px solid #DDD;
 }
 
 .contentStyle {
@@ -22,30 +40,50 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 15vw;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+  margin: 1vh;
+  padding: 1vh 1vw 1vh 1vw;
+  max-width: 20vw;
   max-height: auto;
+  min-height: 27vw;
+  border: 1px solid #DDD;
+  border-radius: 12px;
 }
 .contentStyle img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 12vw;
+  height: 12vw;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 12px;
 }
 .contentStyle h3 {
-  color: var(--txt-black, #282828);
-  margin-top: 2vw;
+  color: #282828;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 1vw;
   font-style: normal;
   font-weight: 500;
   text-align: center;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  white-space: pre-wrap;
+}
+
+.containerWithTitleAndPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1vh;
+  gap: 1vw;
 }
 
 .priceContainer {
@@ -56,27 +94,128 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  gap: 1vw;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 .priceContainer h2 {
-  color: var(--txt-black, #282828);
+  color: #282828;
   font-family: Montserrat;
-  font-size: 40px;
+  font-size: 2vw;
   font-style: normal;
   font-weight: 600;
-  line-height: 110%; /* 44px */
 }
 .priceContainer h4 {
-  color: var(--txt-grey, #8B8B8B);
+  color: #8B8B8B;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 1vw;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 26px */
-  text-decoration-line: strikethrough;
+}
+
+.discountContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1vw;
+  border-radius: 6px;
+  background: #393;
+  position: absolute;
+  right: -1vw;
+  top: -1vw;
+}
+.discountContainer p {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+  #carousel {
+    padding: 5vw;
+  }
+  #carousel .contentStyle {
+    min-height: 19vh;
+    padding: 1vh;
+    border-radius: 3px;
+    margin: 0;
+  }
+  #carousel .containerWithImg {
+    padding: 0;
+  }
+  #carousel .containerWithImg img {
+    max-width: 100%;
+    max-height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 3px;
+  }
+  #carousel .containerWithImg h3 {
+    font-size: 2vw;
+  }
+  #carousel .priceContainer h2 {
+    font-size: 2vw;
+  }
+  #carousel .priceContainer h4 {
+    font-size: 2vw;
+  }
+  .discountContainer {
+    right: -3vw;
+    top: -1vh;
+  }
+  .discountContainer p {
+    font-size: 2vw !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  #carousel {
+    padding: 0 5vh 0 5vh;
+  }
+  #carousel .contentStyle {
+    padding: 0;
+    border-radius: 3px;
+  }
+  #carousel .contentStyle h3 {
+    font-size: 3vw;
+  }
+  #carousel .contentStyle .containerWithTitleAndPrice {
+    min-height: 25vh;
+  }
+  #carousel .containerWithImg {
+    padding: 0;
+  }
+  #carousel .containerWithImg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 10px;
+    padding: 1vw;
+  }
+  #carousel .priceContainer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #carousel .priceContainer h2 {
+    font-size: 4vw;
+  }
+  #carousel .priceContainer h4 {
+    font-size: 3vw;
+  }
+  .discountContainer {
+    right: -2vw;
+    top: -1vh;
+  }
+  .discountContainer p {
+    font-size: 3vw !important;
+  }
 }

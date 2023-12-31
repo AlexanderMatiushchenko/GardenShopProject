@@ -21,6 +21,18 @@ export const cartSlice = createSlice({
       }
       write(state.list);
     },
+
+    addMoreProduct: (state, { payload }) => {
+      const counterQuantity = state.list.find(({ id }) => id === payload.id);
+      if (!counterQuantity) {
+        state.list.push({ ...payload, count: payload.count });
+      } else {
+        counterQuantity.count += payload.count;
+      }
+      write(state.list);
+      
+    },
+    
     increment: (state, { payload }) => {
       state.list.find(({ id }) => id === payload).count++;
       write(state.list);
@@ -34,10 +46,9 @@ export const cartSlice = createSlice({
     removeItem: (state, { payload }) => {
       state.list = state.list.filter(({ id }) => id !== payload);
       write(state.list);
-    },
-    
+    },    
   },
 });
 
-export const { addAction, increment, decrement, removeItem } = cartSlice.actions;
+export const { addAction, increment, decrement, removeItem,addMoreProduct} = cartSlice.actions;
 export default cartSlice.reducer;

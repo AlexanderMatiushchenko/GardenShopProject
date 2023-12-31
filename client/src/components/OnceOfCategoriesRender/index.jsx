@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../../store/slices/categoriesSlice";
 import { fetchAllProducts } from "../../store/slices/productsSlice";
-import OnceOfCategories from "../pages/OnceOfCategories";
+import OnceOfCategories from "../OnceOfCategories";
+
 
 function OnceOfCategoriesRender() {
   const dispatch = useDispatch();

@@ -1,7 +1,8 @@
-        @font-face {
-            font-family: 'Montserrat';
-            src: url('../../../fonts/Montserrat-VariableFont_wght.ttf');    
-        }
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../../fonts/Montserrat-VariableFont_wght.ttf');
+  }
+       @import '../../DiscountPercent/index.module.scss';
         .allSalesMain{
             display: flex;
             flex-direction: column;
@@ -12,7 +13,7 @@
                 h1{
                 color:  #282828;
                 font-family: Montserrat;
-                font-size: 4vw;
+                font-size: 3vw;
                 font-style: normal;
                 font-weight: 700;
                
@@ -22,29 +23,26 @@
         .contaierWithAllSalesProducts{
             display: flex;
             flex-direction: row;
-            align-items: flex-start; 
-            justify-content: center;
             flex-wrap: wrap;
             gap:3vh;
         }
         .containerWithProduct{
             display: flex;
-            position: relative;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            width: 20vw;
-            min-height: 40vh;
-            border-radius: 12px;
-            border: 1px solid #DDD;
+            max-width: 20vw;
+            max-height: auto;
+            gap: 2vh;
+            padding: 1vh;
+            border-radius:  12px;
+            border: 1px solid  #DDD;
         }
         
         .containerWithPriceAndDiscountPrice{
             display: flex;
             flex-direction: row;
-            align-items: flex-end;
             gap: 2vw;
-            padding: 1vw;
+            align-items: baseline;
             h2{
                 color: #282828;
                 font-family: Montserrat;
@@ -54,7 +52,7 @@
     
             }
             h3{
-                color: var(--txt-grey, #8B8B8B);
+                color: #282828;
                 font-family: Montserrat;
                 font-size: 1.2vw;
                 font-style: normal;
@@ -63,56 +61,214 @@
             
         }
     .containerWithImgAndSalesPercent {
-        padding: 2vw;
+        padding: 1vw;
         position: relative;
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        border-bottom: 1px solid var(--grey-divider, #DDD);
-        button{
-            display: flex;
-            max-width: 15vw;
-            padding: 2vh 4vw;
-            justify-content: center;
-            align-items: center;
-            border-radius: 6px;
-            background: #393;
-            transition: background-color 0.3 ease,color 0.3 ease;
-            cursor: pointer;
-            position: absolute;
-            color:  #FFF;
-            text-align: center;
-            font-family: Montserrat;
-            font-size: 2vh;
-            font-style: normal;
-            font-weight: 600;
-    
-            
-            }
-            button:hover{
-                background-color: #282828;
-                color: #DDD;
-            }
+        border-bottom: 1px solid #DDD;
         
         
         img {
             width: 15vw;
-            height: auto;
+            height: 15vw;
             object-fit: cover;
             border-radius: 12px;
+            
+           
         
         }
     }
+    .addToCartButton {
+        display: flex;
+        max-width: 15vw;
+        position: absolute;
+        padding: 2vh 4vw;
+        justify-content: center;
+        align-items: center;
+        border-radius:  6px;
+        background:  #393;
+        color:  #FFF;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 1vw;
+        font-style: normal;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+      }
+      .addToCartButton:hover {
+        background: black;
+        color: white;
+        border-radius: 6px;
+      }
+    
+    .addedButton {
+        max-width: 15vw;
+        position: absolute;
+        padding: 2vh 4vw;
+    justify-content: center;
+    align-items: center;
+    border-radius:  6px;
+    background:  white;
+    color:  black;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 1px solid  #282828;
+    }
     .containerWithProdukTitleAndPrice{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         padding: 2vh;
+        gap: 1vw;
         p{
-            color: #282828;
+            color:  #282828;
             font-family: Montserrat;
             font-size: 1vw;
             font-style: normal;
-            word-wrap:normal;
             font-weight: 500;
         }
-
-
+       
     }
+    .discountContainer{
+        @include discount($customRight: -1vw, $customTop: -1vw); 
+    }
+
+
+    @media only screen and (max-width: 1024px) {
+        .allSalesMain{
+          
+            padding: 0 2vh 0 4vh;
+                h1{
+                font-size: 3vw;
+                
+                }
+        }
+        .contaierWithAllSalesProducts{
+            gap: 2vh;
+        }
+        
+        .addToCartButton,
+        .addedButton {
+            max-width: 15vw;
+            max-height: 1vw;
+            padding: 1.5vw 4vw;
+          
+        }
+    
+        .addToCartButton:hover {
+            background: #393!important;
+            color: white;
+            border-radius: 6px;
+        }
+        .containerWithPriceAndDiscountPrice{
+            flex-wrap: wrap;
+            h2{
+                font-size: 3vw;
+            }
+            h3{
+                font-size: 2vw;
+            }
+            
+        }
+        .containerWithProdukTitleAndPrice{
+            padding: 1vw;
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                border-radius: 12px;
+            }
+            p{
+                font-size: 1.5vw;
+            }
+        }
+        .discountContainer{
+            right: -2vw;
+            top: -1vh;
+            p{
+              font-size: 2vw!important;
+            }
+        }
+    }
+
+      
+      @media only screen and (max-width: 768px) {
+        .allSalesMain{
+            display: flex;
+        flex-direction: column;
+        max-width: 100vw;
+        justify-content:  center;
+        align-items: baseline;
+        padding: 0  5vh 0 5vh;
+        h1{
+            font-size:4vw;
+        }
+
+        }
+        .containerWithProduct{
+            justify-content: flex-start;
+            min-height: 40vw;
+            min-width: 35vw;
+            align-items: center;
+          
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 10px;
+                padding: 1vw;
+            }
+            p{
+                font-size: 1.8vh;
+            }
+            h2{
+                font-size: 2vh;
+            }
+            h3{
+                font-size: 4vw;
+            }
+        }
+        .addedButton,
+        .addToCartButton{
+            max-width: 30vw;
+            max-height: 2vw;
+            padding: 2vh 6vw;
+            font-size: 1.5vh;
+          
+        }
+        
+    
+        .addToCartButton:hover {
+            background: #393!important;
+            color: white;
+            border-radius: 6px;
+        }
+    .containerWithPriceAndDiscountPrice{
+        flex-wrap: wrap;
+        h2 {
+            font-size: 5vw;
+          } 
+           p{
+            font-size: 4vw;
+          }
+    }
+        .containerWithPriceAndDiscountPrice{
+            flex-direction: row;
+
+        }
+        .discountContainer{
+            right: -2vw;
+            top: -1vh;
+            p{
+              font-size: 3vw!important;
+            }
+        }
+    }
+ 

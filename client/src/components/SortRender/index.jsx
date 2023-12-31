@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.module.css';
 
-function SortRender({ selectedSortOption, isActiveSortOptions, handleSort, toggleSortOptions }) {
+function SortRender({ selectedSortOption, isActiveSortOptions, handleSort }) {
   return (
     <div className={styles.containerWithSortBtn}>
       <div className={styles.sortBtns + (isActiveSortOptions ? ` ${styles.active}` : '')}>

@@ -1,28 +1,32 @@
 import React from "react";
 import styles from "./index.module.css";
-import imgWithBtn from "../../../assets/homepage/img1.svg";
+
 import imgDiscount from "../../../assets/homepage/img2.svg";
 import CategoriesCarousel from "../../CategoriesCarousel";
 import DiscountCarousel from "../../DiscountCarousel";
 import PostRequest from "../../PostRequest";
 import { Link } from "react-router-dom";
+import { frontendURL } from "../../../utils/var";
+
 
 function HomePage() {
-  const frontendUrl = "http://localhost:3000"
+
 
   return (
     <div className={styles.mainHomePageDiv}>
       <div className={styles.divWithCheckoutBtn}>
         <h1 className={styles.h1HomePage}>
-          Amazing Discounts on Garden Products!
+          Amazing Discounts <br />
+           on Garden Products!
         </h1>
-        <Link to={`${frontendUrl}/sales/all`}>
+       
+        <Link to={`${frontendURL}/sales/all`}>
         <button className={styles.buttonCheckOut} >Check out</button></Link>
       </div>
       <div className={styles.divWithLineAndButtonAllCategories}>
         <h2>Categories</h2>
         <div className={styles.line}></div>
-        <Link to={`${frontendUrl}/categories/all`}>
+        <Link to={`${frontendURL}/categories/all`}>
         <button>All categories</button>
         </Link>
       </div>
@@ -38,7 +42,7 @@ function HomePage() {
       <div className={styles.sale}>
         <h2>Sale</h2>
         <div className={styles.line}></div>
-        <Link to={`${frontendUrl}/sales/all`}>
+        <Link to={`${frontendURL}/sales/all`}>
         <button>All sales</button>
         </Link>
       </div>

@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../fonts/Montserrat-Italic-VariableFont_wght.ttf');
+}
+
+.burgerMenuMain{
+    display: none;
+ 
+}
+
+@media only screen and (max-width:768px){
+.burgerList{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 1vh;
+    gap: 2vh;
+}
+.burgerMenuMain{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: self-start;
+}
+.burgerItem{
+font-size: 2.5vh;
+color:  white;
+font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+}
+
+.burgerNav{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 18vh;
+    background-color: #393;
+    z-index: 2;
+    transition: transform 0.8s linear;
+  
+}
+
+.burgerNav.active{
+    transform: translateY(120vh);
+}
+.burgerBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 5vh;
+    height: 4vh;
+  }
+  
+  .burgerBtn span {
+    background-color: #333; 
+    height: 1vh;
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+  
+  }
+  
+  
+  .burgerBtn span:nth-child(2) {
+    margin: 1vh 0; 
+    
+  }
+  
+ 
+}

@@ -5,9 +5,14 @@ import styles from "../../pages/AllProducts/index.module.css";
 import SortAndFilterOption from "../../SortAndFilterOption";
 import sortProducts from "../../../utils/api";
 import DiscountPercent from "../../DiscountPercent";
+import { Link } from "react-router-dom";
+import NavBar from "../../NavBar";
+import { backendURL,frontendURL } from "../../../utils/var";
+
+
 
 function AllProducts({ products }) {
-  const baseURL = "http://localhost:3333";
+ 
   const dispatch = useDispatch();
 
   const [sortBy, setSortBy] = useState('default');
@@ -16,6 +21,8 @@ function AllProducts({ products }) {
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [isActiveSortOptions, setIsActiveSortOptions] = useState(false);
   const [showDiscountedOnly, setShowDiscountedOnly] = useState(false);
+  const [isAdded,setIsAdded]=useState(false);
+  const [addedProducts, setAddedProducts] = useState([]);
 
   useEffect(() => {
     const filterAndSortProducts = () => {
@@ -42,7 +49,15 @@ function AllProducts({ products }) {
 
   const handleAddToCart = (product) => {
     dispatch(addAction(product));
-    console.log("Product added to cart:", product);
+    setIsAdded(true);
+
+    setAddedProducts((prevAddedProducts) => [...prevAddedProducts, product.id]);
+
+    setTimeout(()=>{
+      setAddedProducts((prevAddedProducts) =>
+      prevAddedProducts.filter((id) => id !== product.id)
+    );
+  }, 1500);
   };
 
   const handleSort = (option) => {
@@ -55,8 +70,15 @@ function AllProducts({ products }) {
     setPriceTo(to);
   };
 
+  const links = [
+    { to: "/", label: "Home page" },
+    { to: "/products/all", label: "All products" },
+  ];
+
   return (
-    <div className={styles.allProductsMain}>
+    <> 
+    <NavBar links={links} />
+        <div className={styles.allProductsMain}>
       <h1>All products</h1>
       <SortAndFilterOption
        priceFrom={priceFrom}
@@ -70,28 +92,51 @@ function AllProducts({ products }) {
       />
       <div className={styles.containerWithAllProducts}>
         {filteredProducts.map((product) => (
+         
           <div key={product.id} className={styles.containerWithImgAndPrice}>
             <div className={styles.containerWithImgAndBtn}>
               
-              <img src={`${baseURL}${product.image}`} alt="" />
+              <img src={`${backendURL}${product.image}`} alt="" />
+              <div className={styles.discountContainer}>
               <DiscountPercent discontPrice={product.discont_price} price={product.price} />
-              <button onClick={() => handleAddToCart(product)}>Add to cart</button>
+              </div>
+              <button
+                className={
+                  addedProducts.includes(product.id)
+                    ? styles.addedButton
+                    : styles.addToCartButton
+                }
+                onClick={() => handleAddToCart(product)}
+                disabled={addedProducts.includes(product.id)}
+              >
+                {addedProducts.includes(product.id) ? "Added" : "Add to cart"}
+              </button>
             </div>
+            <Link to={`${frontendURL}/products/${product.id}`} >
             <div className={styles.containerPriceAndTitle}>
               <h3>{product.title}</h3>
+              <div className={styles.priceContainer}>
               {product.discont_price !== null ? (
                 <>
                   <h2>{product.discont_price} €</h2>
-                  <p><del>{product.price} €</del></p>
-                </>
+                  <del><p>{product.price} €</p></del>
+                  </>
+               
               ) : (
                 <h2>{product.price} €</h2>
               )}
+                </div>
             </div>
+            </Link>
           </div>
+          
         ))}
+        
       </div>
+      
     </div>
+    </>
+
   );
 }
 

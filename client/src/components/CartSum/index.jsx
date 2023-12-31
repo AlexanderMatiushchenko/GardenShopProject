@@ -2,7 +2,7 @@
   import styles from "./index.module.css"
   import PostRequestCart from "../PostRequestCart/index";
 
-  const CartSum = ({ cartItems, handleRemoveItem }) => {
+  const CartSum = ({ cartItems}) => {
     const calculateItems = () => {
       return cartItems.reduce((total, item) => total + item.count, 0);
     };

@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch} from "react-redux";
-import { addAction } from "../../store/slices/cartSlice";
+import { addMoreProduct } from "../../store/slices/cartSlice";
 import styles from "./index.module.css";
 import OneItemCounter from "../OneItemCounter"
 import DiscountPercent from "../DiscountPercent";
+import NavBar from "../NavBar";
+import { backendURL } from "../../utils/var";
 
 
 
-function OneItem({ products }) {
-  const baseURL = "http://localhost:3333";
+function OneItem({ products, categories}) {
+
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
   const [isAdded, setIsAdded] = useState(false);
+  const [count, setCount] = useState(1)
   const dispatch = useDispatch();
  
+
 
   if (!product) {
     return <div>Product not found</div>;
@@ -22,25 +26,41 @@ function OneItem({ products }) {
 
 
   const handleAddToCart = () => {
-    dispatch(addAction(product));
+    dispatch(addMoreProduct({ ...product, count }));
     setIsAdded(true);
-    console.log(product);
-
     
     setTimeout(() => {
       setIsAdded(false);
     }, 1500);
   };
+  
+
+  const selectedCategory = categories.find((category) => category.id === product.categoryId);
+
+const links = [
+  { to: "/", label: "Home page" },
+  { to: "/categories/all", label: "Categories" },
+  selectedCategory && { to: `/categories/${selectedCategory.id}`, label: selectedCategory.title },
+  product && { to: `/products/${product.id}`, label: product.title },
+].filter(Boolean);
 
   return (
+
+    <>
+    <NavBar links={links} />
     <div className={styles.containerWithProduct}>
       <div className={styles.containerWithProduktImg}>
         <div className={styles.continerWithSmallImg}>
-          <img src={`${baseURL}${product.image}`} alt={product.title} />
-          <img src={`${baseURL}${product.image}`} alt={product.title} />
-          <img src={`${baseURL}${product.image}`} alt={product.title} />
+          <img src={`${backendURL}${product.image}`} alt={product.title} />
+          <img src={`${backendURL}${product.image}`} alt={product.title} />
+          <img src={`${backendURL}${product.image}`} alt={product.title} />
         </div>
-        <img src={`${baseURL}${product.image}`} alt={product.title} />
+        <div className={styles.containerImgAndDiscountPercent}>
+        <img src={`${backendURL}${product.image}`} alt={product.title} />
+        <div className={styles.discountContainer  }>
+        <DiscountPercent discontPrice={product.discont_price} price={product.price}/>
+        </div>
+        </div>
       </div>
       <div className={styles.containerWithPriceTitleandDescription}>
         <h3>{product.title}</h3>
@@ -48,17 +68,15 @@ function OneItem({ products }) {
 
           
           <div className={styles.priceContainer}>
-          <div className={styles.percentContainer}>
-          <DiscountPercent discountedItem={product}/>
-          </div>
-            <h2>{product.discont_price} €</h2>
           
+            <h2>{product.discont_price} €</h2>
           <h4>{product.price} €</h4>
           
           </div>
           
           <div className={styles.counterAndCartBtn}>
-          <OneItemCounter product={product}/>
+          <OneItemCounter product={product} onCountChange={setCount} />
+
           <button
             className={isAdded ? styles.addedButton : styles.addToCartButton}
             onClick={handleAddToCart}
@@ -71,6 +89,7 @@ function OneItem({ products }) {
        <p>{`${product.description}`}</p>
       </div>
     </div>
+    </>
   );
 }
 

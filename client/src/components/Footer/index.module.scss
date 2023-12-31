@@ -1,9 +1,9 @@
+
 @font-face {
     font-family: 'Montserrat';
-    src: url('../../../fonts/Montserrat-VariableFont_wght.ttf');
-    
+    src: url('../../fonts/Montserrat-VariableFont_wght.ttf');
   }
-
+  
 .contactMain{
 display: inline-flex;
 padding: 0vw 15vw 4vh 15vw;
@@ -68,14 +68,6 @@ align-self: stretch;
 border-radius: 12px;
 background: #F1F3F4;
 }
-.mapImg {
-display: inline-flex;
-max-width: 68vw;
-max-height: 40vh;
-flex-direction: column;
-justify-content: flex-end;
-align-items: flex-start;
-}
 
 .contactP{
 color:  #8B8B8B;
@@ -101,19 +93,43 @@ font-style: normal;
 font-weight: 600;
 
 }
+iframe{
+    width: 68vw;
+    height: 60vh;
+    border: none;
+}   
+@media only screen and (max-width:1024px) {
+    
+        
+        .contactH1{
+            padding: 1vh;
+            font-size: 6vw;
+            
+        }
+        .contactH2{
+            font-size: 3vw;
+        }
+        .contactSocials,
+        .contactAdress,
+        .contactsWorkingHours,
+        .contactPhone{
+            p{
+                font-size: 2vw;
+            }
+            white-space:break-spaces;
+            padding: 2vh;
+            max-width: 30vw;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+}
+
 
 @media only screen and (max-width: 767px){
-    .contactMain{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1vh;
-    gap: 1vh;
-        
-    }
+    
     .contactH1{
         padding: 1vh;
-        font-size: 8vw;
+        font-size: 6vw;
         justify-content: center;
         display: flex;
     
@@ -121,23 +137,25 @@ font-weight: 600;
     .contactH2{
         font-size: 4vw;
     }
+    .contactSocials,
+    .contactAdress,
+    .contactsWorkingHours,
     .contactPhone{
-        white-space: normal;
+        p{
+            font-size: 3vw;
+        }
+        white-space:break-spaces;
         padding: 1vh;
+        max-width: 30vw;
+        align-items: center;
+        justify-content: flex-start;
     }
-    .contactAdress {
-        padding: 1vh;
+    
+    iframe{
+        width: 68vw;
+        height: 30vh;
+        border: none;
     }
-    .contactsWorkingHours{
-        padding: 1vh;
-    }
-    .contactSocials{
-        padding: 1vh;
-    }
-   
-}
-iframe{
-width: 68vw;
-height: 20vw;
-border: none;
+
+
 }

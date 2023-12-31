@@ -1,12 +1,52 @@
-@import url(../DiscountPercent/index.module.scss);
 @font-face {
   font-family: "Montserrat";
   src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
+}
+.containerImgAndDiscountPercent img {
+  max-width: 20vw;
+  max-height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+
+.discountContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1vw;
+  border-radius: 6px;
+  background: #393;
+  position: absolute;
+  right: 50vw;
+  top: 10vw;
+}
+.discountContainer p {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 600;
+}
+
 .containerWithProduct {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -28,13 +68,6 @@
   max-width: 20vw;
   gap: 2vw;
 }
-.containerWithProduktImg img {
-  max-width: 100%;
-  max-height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 12px;
-}
 
 .continerWithSmallImg {
   display: -webkit-box;
@@ -55,6 +88,12 @@
      object-fit: cover;
   max-height: auto;
   border-radius: 12px;
+  border: 1px solid #DDD;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.continerWithSmallImg img:hover {
   border: 1px solid #393;
 }
 
@@ -74,7 +113,7 @@
 }
 .containerWithPriceTitleandDescription p {
   overflow: hidden;
-  color: var(--txt-black, #282828);
+  color: #282828;
   text-overflow: ellipsis;
   white-space: normal;
   font-family: Montserrat;
@@ -121,59 +160,6 @@
       -ms-flex-align: baseline;
           align-items: baseline;
   gap: 3vw;
-}
-
-.percentContainer {
-  position: absolute;
-  background: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  border-radius: 6px;
-  background: #393;
-  position: absolute;
-  padding: 0.3vw;
-  right: 25vw;
-  top: 11vw;
-}
-.percentContainer p {
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 1vw;
-  font-style: normal;
-  font-weight: 600;
-}
-
-.priceContainer.discountPercentContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 1vw;
-  border-radius: 6px;
-  background: #393;
-  position: absolute;
-  padding: 0.3vw;
-  right: -29vw;
-  top: 1vw;
-}
-.priceContainer.discountPercentContainer p {
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 1vw;
-  font-style: normal;
-  font-weight: 600;
 }
 
 .counterAndCartBtn {
@@ -237,4 +223,116 @@
   font-weight: 600;
   border-radius: 6px;
   border: 1px solid #282828;
+}
+
+@media only screen and (max-width: 1024px) {
+  .containerWithProduct {
+    padding: 0 3vh 0 3vh;
+    gap: 30vw;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .continerWithSmallImg img {
+    min-width: 10vw;
+    min-height: auto;
+  }
+  .containerImgAndDiscountPercent img {
+    max-width: 35vw;
+    max-height: auto;
+  }
+  .containerWithPriceTitleandDescription {
+    max-width: 40vw;
+  }
+  .containerWithPriceTitleandDescription h3 {
+    font-size: 3vw;
+  }
+  .priceContainer {
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+  }
+  .priceContainer h2 {
+    font-size: 4vw;
+  }
+  .addToCartButton {
+    width: 20vw;
+    font-size: 2vw;
+  }
+  .addedButton {
+    width: 20vw;
+    font-size: 2vw;
+  }
+  .containerWithPriceTitleandDescription p {
+    font-size: 2vw;
+  }
+  .addToCartButton:hover {
+    background: #393 !important;
+    color: white;
+    border-radius: 6px;
+  }
+  .discountContainer {
+    right: 45vw;
+    top: 17vh;
+  }
+  .discountContainer p {
+    font-size: 3vw !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .containerWithProduct {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1vw;
+    padding: 0 5vh 0 5vh;
+  }
+  .containerWithProduktImg {
+    gap: 8vh;
+  }
+  .continerWithSmallImg img {
+    min-width: 17vw;
+    min-height: auto;
+  }
+  .containerImgAndDiscountPercent img {
+    max-width: 50vw;
+    max-height: auto;
+  }
+  .containerWithPriceTitleandDescription {
+    max-width: 80vw;
+  }
+  .containerWithPriceTitleandDescription h3 {
+    font-size: 6vw;
+  }
+  .containerWithPriceTitleandDescription p {
+    font-size: 4vw;
+  }
+  .priceContainer {
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    gap: 5vw;
+  }
+  .priceContainer h4 {
+    font-size: 4vw;
+  }
+  .priceContainer h2 {
+    font-size: 8vw;
+  }
+  .addToCartButton {
+    width: 40vw;
+    font-size: 4vw;
+  }
+  .addedButton {
+    width: 40vw;
+    font-size: 4vw;
+  }
+  .discountContainer {
+    right: 13vw;
+    top: 33vh;
+  }
+  .discountContainer p {
+    font-size: 5vw !important;
+  }
 }

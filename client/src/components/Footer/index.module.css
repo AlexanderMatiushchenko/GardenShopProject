@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Montserrat";
-  src: url("../../../fonts/Montserrat-VariableFont_wght.ttf");
+  src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
 }
 .contactMain {
   display: -webkit-inline-box;
@@ -126,24 +126,6 @@
   background: #F1F3F4;
 }
 
-.mapImg {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  max-width: 68vw;
-  max-height: 40vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
 .contactP {
   color: #8B8B8B;
   font-family: Montserrat;
@@ -171,23 +153,45 @@
   font-weight: 600;
 }
 
-@media only screen and (max-width: 767px) {
-  .contactMain {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 1vh;
-    gap: 1vh;
-  }
+iframe {
+  width: 68vw;
+  height: 60vh;
+  border: none;
+}
+
+@media only screen and (max-width: 1024px) {
   .contactH1 {
     padding: 1vh;
-    font-size: 8vw;
+    font-size: 6vw;
+  }
+  .contactH2 {
+    font-size: 3vw;
+  }
+  .contactSocials,
+  .contactAdress,
+  .contactsWorkingHours,
+  .contactPhone {
+    white-space: break-spaces;
+    padding: 2vh;
+    max-width: 30vw;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .contactSocials p,
+  .contactAdress p,
+  .contactsWorkingHours p,
+  .contactPhone p {
+    font-size: 2vw;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .contactH1 {
+    padding: 1vh;
+    font-size: 6vw;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -198,22 +202,29 @@
   .contactH2 {
     font-size: 4vw;
   }
+  .contactSocials,
+  .contactAdress,
+  .contactsWorkingHours,
   .contactPhone {
-    white-space: normal;
+    white-space: break-spaces;
     padding: 1vh;
+    max-width: 30vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-  .contactAdress {
-    padding: 1vh;
+  .contactSocials p,
+  .contactAdress p,
+  .contactsWorkingHours p,
+  .contactPhone p {
+    font-size: 3vw;
   }
-  .contactsWorkingHours {
-    padding: 1vh;
+  iframe {
+    width: 68vw;
+    height: 30vh;
+    border: none;
   }
-  .contactSocials {
-    padding: 1vh;
-  }
-}
-iframe {
-  width: 68vw;
-  height: 20vw;
-  border: none;
 }

@@ -1,7 +1,9 @@
+
 @font-face {
-    font-family: 'Montserrat';
-    src: url('../../fonts/Montserrat-VariableFont_wght.ttf');
-  }
+  font-family: 'Montserrat';
+  src: url('../../fonts/Montserrat-VariableFont_wght.ttf');
+}
+
  
   @mixin discount ($customRight, $customTop) {
     display: flex;
@@ -11,9 +13,8 @@
     border-radius: 6px;
     background: #393;
     position: absolute;
-    padding: 0.3vw;
     right: $customRight;
-    top:$customTop ;
+    top:$customTop;
   
     p {
       color: #FFF;
@@ -24,6 +25,3 @@
     }
   }
   
-  .discountPercentContainer {
-    @include discount($customRight: 2vw, $customTop: 1.5vw);
-  }

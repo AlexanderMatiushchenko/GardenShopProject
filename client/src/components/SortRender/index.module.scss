@@ -1,27 +1,25 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../fonts/Montserrat-VariableFont_wght.ttf');
+}
 .containerWithSortBtn{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     position: relative;
     color:  #282828;
-    padding: 2vw;
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
+    
 
 .sortBtns{
     select {
             display: flex;
-            width: 200px;
-            padding: 8px 8px 8px 16px;
-            gap: 8px;
+            width: 10vw;
+            padding: 0.5vw 0.5vw 0.5vw 1vw;
             color:  #282828;
             font-family: Montserrat;
-            font-size: 16px;
+            font-size: 0.8vw;
             font-style: normal;
             font-weight: 500;
-        
             border-radius: 6px;
             border: 1px solid  #DDD;
             cursor: pointer;
@@ -30,3 +28,31 @@ font-weight: 600;
 }
 
 }
+
+@media only screen and (max-width: 1024px) {
+    .containerWithSortBtn {
+      padding: 1vw;
+  
+    .sortBtns{
+        select {
+            width: 20vw;
+            font-size: 2vw;
+          }
+}
+}
+  
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .containerWithSortBtn {
+      padding: 0.5vw;
+   
+  
+    .sortBtns{ select {
+        width:30vw;
+        font-size: 3vw;
+    }
+  }
+}
+    
+  }

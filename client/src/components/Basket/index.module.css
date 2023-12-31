@@ -1,7 +1,28 @@
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../../fonts/Montserrat-VariableFont_wght.ttf");
+.discountContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1vw;
+  border-radius: 6px;
+  background: #393;
+  position: absolute;
+  right: 31vw;
+  top: -1vw;
 }
+.discountContainer p {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 600;
+}
+
 .basketMainContainer {
   padding: 1vw 15vw 4vw 15vw;
   display: -webkit-box;
@@ -18,6 +39,9 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   gap: 2vh;
+}
+.basketMainContainer button {
+  cursor: pointer;
 }
 
 .containerWithH1ShoppingCart {
@@ -75,6 +99,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 45vw;
+  max-height: 30vh;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -84,10 +110,10 @@
   gap: 2vh;
   border-radius: 12px;
   border: 1px solid #DDD;
-  background: cover no-repeat;
+  background: cover;
 }
 .containerWithProduct img {
-  max-width: 20%;
+  max-width: 10vw;
   max-height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -120,7 +146,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  white-space: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 2vh;
 }
 .containerWithPriceAndCounter h3 {
@@ -145,6 +172,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 1vh;
 }
 .containerProductTitleAndCloseBtn p {
   word-wrap: break-word;
@@ -214,7 +242,6 @@
           align-items: stretch;
 }
 
-/* Styles for 1024px */
 @media screen and (max-width: 1024px) {
   .basketMainContainer {
     padding: 0vw 15vw 4vw 15vw;
@@ -252,7 +279,8 @@
     gap: 1vh;
   }
   .containerWithProduct img {
-    max-width: 30%;
+    max-width: 15vw;
+    max-height: 15vw;
   }
   .containerWithOrderDetails {
     max-width: 50vw;
@@ -302,8 +330,14 @@
   .containerWithContainersTitleCounterAndPrice {
     max-width: 60vw;
   }
+  .discountContainer {
+    right: 25vw;
+    top: -1vh;
+  }
+  .discountContainer p {
+    font-size: 2vw !important;
+  }
 }
-/* Styles for 768 px*/
 @media screen and (max-width: 768px) {
   .basketMainContainer {
     padding: 0vw 3vw 4vw 3vw;
@@ -311,8 +345,6 @@
   }
   .basketMainContainer button {
     font-size: 1.3vh;
-    width: 30vw;
-    height: 5vh;
   }
   .containerWithH1ShoppingCart h1 {
     font-size: 4.5vw;
@@ -328,65 +360,55 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 90vw;
     gap: 12px;
   }
   .containerWithProduct {
-    padding: 0.5vh;
+    padding: 1vh;
     gap: 0.5vh;
-  }
-  .containerWithProduct img {
-    max-width: 30%;
-  }
-  .containerWithOrderDetails {
-    min-width: 90vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 1vw;
-    gap: 0.5vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-width: 60vw;
+    max-height: 60vh;
   }
-  .containerWithOrderDetails input {
-    padding: 1vh 2vw;
-    font-size: 1.2vh;
-  }
-  .containerWithOrderDetails button {
-    padding: 1vh 2vw;
-    font-size: 1.2vh;
-  }
-  .containerWithOrderDetails h2 {
-    font-size: 2.5vh;
-  }
-  .containerWithOrderDetails h3 {
-    font-size: 2.5vh;
-  }
-  .containerWithOrderDetails h1 {
-    font-size: 3.5vh;
+  .containerWithProduct img {
+    max-width: 40vw;
+    max-height: 40vh;
+    margin: 1vh;
   }
   .containerWithPriceAndCounter {
-    gap: 0.5vh;
+    gap: 1vh;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .containerWithPriceAndCounter h3 {
-    font-size: 2.5vh;
+    font-size: 4vh;
   }
   .containerWithPriceAndCounter h5 {
-    font-size: 1.2vh;
+    font-size: 3vh;
   }
   .containerProductTitleAndCloseBtn p {
-    font-size: 1.5vh;
-    margin-bottom: 0.5vh;
+    font-size: 3vh;
   }
   .containerProductTitleAndCloseBtn button {
-    font-size: 2.5vh;
-    margin: 0.3vh;
+    font-size: 5vh;
   }
-  .containerWithProductPriceAndDiscountPrice {
-    gap: 0.5vh;
+  .discountContainer {
+    right: 7vw;
+    top: 1vh;
   }
-  .mapProductsRenderContainer {
-    gap: 0.5vh;
-  }
-  .containerWithContainersTitleCounterAndPrice {
-    max-width: 90vw;
+  .discountContainer p {
+    font-size: 4vw !important;
   }
 }

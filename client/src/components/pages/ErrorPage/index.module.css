@@ -91,7 +91,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 2vh; /* Пространство между элементами в высоту */
+  gap: 2vh;
 }
 
 .containerWithCactus {
@@ -105,11 +105,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2vh; /* Пространство между изображениями в высоту */
+  gap: 2vh;
 }
 .containerWithCactus img {
-  max-width: 30vw; /* Максимальная ширина изображения */
-  height: auto; /* Автоматическое вычисление высоты, чтобы сохранить пропорции */
+  max-width: 30vw;
+  height: auto;
 }
 
 .containerWithBtn {
@@ -128,7 +128,7 @@
           align-items: center;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .containerWithCactus img {
     max-width: 20vw;
     max-height: auto;

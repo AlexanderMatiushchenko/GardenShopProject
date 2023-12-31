@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-Italic-VariableFont_wght.ttf");
+}
+.burgerMenuMain {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .burgerList {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1vh;
+    gap: 2vh;
+  }
+  .burgerMenuMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: self-start;
+        -ms-flex-align: self-start;
+            align-items: self-start;
+  }
+  .burgerItem {
+    font-size: 2.5vh;
+    color: white;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .burgerNav {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: 100vw;
+    min-height: 18vh;
+    background-color: #393;
+    z-index: 2;
+    -webkit-transition: -webkit-transform 0.8s linear;
+    transition: -webkit-transform 0.8s linear;
+    transition: transform 0.8s linear;
+    transition: transform 0.8s linear, -webkit-transform 0.8s linear;
+  }
+  .burgerNav.active {
+    -webkit-transform: translateY(120vh);
+            transform: translateY(120vh);
+  }
+  .burgerBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 5vh;
+    height: 4vh;
+  }
+  .burgerBtn span {
+    background-color: #333;
+    height: 1vh;
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+  }
+  .burgerBtn span:nth-child(2) {
+    margin: 1vh 0;
+  }
+}

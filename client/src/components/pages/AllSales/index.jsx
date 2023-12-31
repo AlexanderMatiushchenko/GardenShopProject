@@ -6,10 +6,11 @@ import DiscountPercent from '../../DiscountPercent';
 import sortProducts from '../../../utils/api';
 import { useDispatch } from 'react-redux';
 import { addAction } from "../../../store/slices/cartSlice";
+import NavBar from '../../NavBar';
+import { backendURL,frontendURL } from '../../../utils/var';
 
 function AllSales({ products }) {
-  const baseURL = 'http://localhost:3333';
-  const frontendURL = 'http://localhost:3000';
+
   const [onlySalesItems, setOnlySalesItems] = useState([]);
   const [sortBy, setSortBy] = useState('default');
   const [selectedSortOption, setSelectedSortOption] = useState('default');
@@ -17,12 +18,22 @@ function AllSales({ products }) {
   const [priceTo, setPriceTo] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [isActiveSortOptions, setIsActiveSortOptions] = useState(false);
+  const [isAdded,setIsAdded]=useState(false);
+  const [addedProducts, setAddedProducts] = useState([]);
   
 
   const dispatch = useDispatch();
-  const handleAddToCart = (products) => {
-    dispatch(addAction(products)); 
-    console.log("Product added to cart:", products);
+  const handleAddToCart = (product) => {
+    dispatch(addAction(product));
+    setIsAdded(true);
+
+    setAddedProducts((prevAddedProducts) => [...prevAddedProducts, product.id]);
+
+    setTimeout(()=>{
+      setAddedProducts((prevAddedProducts) =>
+      prevAddedProducts.filter((id) => id !== product.id)
+    );
+  }, 1500);
   };
 
   useEffect(() => {
@@ -55,10 +66,16 @@ function AllSales({ products }) {
     setPriceFrom(from);
     setPriceTo(to);
   };
+  const links = [
+    { to: "/", label: "Home page" },
 
-  
+    { to: "/sales/all", label: "All sales" },
+  ];
+ 
 
   return (
+    <>
+    <NavBar  links={links} />
     <div className={styles.allSalesMain}>
       <div className={styles.conteinerStateBtn}></div>
       <h1>Discounted items</h1>
@@ -73,12 +90,24 @@ function AllSales({ products }) {
       <div className={styles.contaierWithAllSalesProducts}>
         {filteredProducts.map((el) => (
           
-            <div className={styles.containerWithProduct}>
+            <div key={el.id} className={styles.containerWithProduct}>
               <div className={styles.containerWithImgAndSalesPercent}>
-                <img src={`${baseURL}${el.image}`} alt={el.title} />
+                <img src={`${backendURL}${el.image}`} alt={el.title} />
+                <div className={styles.discountContainer}>
+                  <DiscountPercent discontPrice={el.discont_price} price={el.price} />
+                </div>
+                <button
+                className={
+                  addedProducts.includes(el.id)
+                    ? styles.addedButton
+                    : styles.addToCartButton
+                }
+                onClick={() => handleAddToCart(el)}
+                disabled={addedProducts.includes(el.id)}
+              >
+                {addedProducts.includes(el.id) ? "Added" : "Add to cart"}
+              </button>
                 
-                <button onClick={() => handleAddToCart(products)}>Add to cart</button>
-                <DiscountPercent discontPrice={el.discont_price} price={el.price} />
               </div>
               <Link to={`${frontendURL}/products/${el.id}`} key={el.id}>
               <div className={styles.containerWithProdukTitleAndPrice}>
@@ -97,6 +126,7 @@ function AllSales({ products }) {
         ))}
       </div>
     </div>
+    </>
   );
 }
 

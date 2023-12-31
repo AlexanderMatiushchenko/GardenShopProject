@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Montserrat';
     src: url('../../../fonts/Montserrat-VariableFont_wght.ttf');
-    
   }
+  
 *{
     margin: 0;
     padding: 0;
@@ -65,19 +65,16 @@ transition: background 0.3s ease, color 0.3s ease;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2vh; /* Пространство между элементами в высоту */
-    
-    // /* Устанавливаем минимальную высоту, чтобы избежать слишком маленького контейнера на мобильных устройствах */
-    // min-height: 100vh;
+    gap: 2vh; 
 }
 .containerWithCactus {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2vh; /* Пространство между изображениями в высоту */
+    gap: 2vh; 
     img {
-        max-width: 30vw; /* Максимальная ширина изображения */
-        height: auto; /* Автоматическое вычисление высоты, чтобы сохранить пропорции */
+        max-width: 30vw; 
+        height: auto;  
     }
 }
 .containerWithBtn{
@@ -87,18 +84,16 @@ transition: background 0.3s ease, color 0.3s ease;
     align-items: center;
 
 }
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 768px){
     .containerWithCactus{
         
         img{
             max-width: 20vw;
-            max-height: auto    ;
+            max-height: auto;
         }
        
     }
-    .containerWithBtn{
-
-    }
+   
     .errPageP{
         padding: 1vh;
     }

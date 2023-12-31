@@ -1,29 +1,19 @@
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../fonts/Montserrat-VariableFont_wght.ttf");
-}
 .discountPercentContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: flex-end;
+  align-items: flex-start;
   gap: 1vw;
   border-radius: 6px;
   background: #393;
   position: absolute;
   padding: 0.3vw;
   right: 2vw;
-  top: 1.5vw;
-}
-.discountPercentContainer p {
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 1vw;
-  font-style: normal;
-  font-weight: 600;
-}
+  top: 1.5vw; }
+  .discountPercentContainer p {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 600; }
+
+/*# sourceMappingURL=index.module.css.map */

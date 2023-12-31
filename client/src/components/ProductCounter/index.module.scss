@@ -1,8 +1,7 @@
 @font-face {
-    font-family: 'Montserrat';
-    src: url('../../fonts/Montserrat-VariableFont_wght.ttf');    
-  }
-
+  font-family: 'Montserrat';
+  src: url('../../fonts/Montserrat-VariableFont_wght.ttf');
+}
 .containerWithProductCounter{
     display: flex;
     flex-direction: row;
@@ -18,45 +17,46 @@
             border-bottom: 1px solid #DDD;
         }
         
-    button{
-        display: flex;
-        width: 4vw;
-        height: 4vw;
-        font-size: 3vw;
-        font-weight: 100;
-        color: rgba(139, 139, 139, 1);
-        text-align: center;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-        border-radius: 6px;
-        border: 1px solid  #DDD;
-        cursor: pointer;
-    }
+      button{
+            display: flex;
+            width: 4vw;
+            height: 4vw;
+            font-size: 3vw;
+            font-weight: 100;
+            color: rgba(139, 139, 139, 1);
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            border: 1px solid  #DDD;
+            cursor: pointer;
+      }   
     }
    
     
-/* Styles for 1024px */
-    .containerwithProductCounter {
+    @media screen and (max-width: 1024px) {
+    .containerWithProductCounter{
         h3 {
-          width: 5vw;
+          max-width: 10vw;
         }
     
         button {
-          width: 5vw;
-          height: 5vw;
+          max-width: 10vw;
+          max-height: 10vw;
         }
       }
- /* Styles for 768 px*/
-      .containerwithProductCounter {
+    }
+      @media screen and (max-width: 768px) {
+      .containerWithProductCounter {
         h3 {
-            width: 6vw;
+            max-width: 10vw;
         }
 
         button {
-          
-            width: 6vw;
-            height: 6vw;
+       font-size: 8vw;
+            max-width: 10vw;
+            max-height: 10vw;
         }
     }
+  }

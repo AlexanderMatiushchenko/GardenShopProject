@@ -1,0 +1,264 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../fonts/Montserrat-VariableFont_wght.ttf');
+  }
+@import '../../DiscountPercent/index.module.scss';
+
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    justify-content:  center;
+    align-items: baseline;
+    padding: 0 15vh 0 15vh;
+  
+h1{
+    color:  #282828;
+font-family: Montserrat;
+font-size: 7vh;
+font-style: normal;
+font-weight: 700;
+    
+}
+
+}
+.continerMainProduct{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:3vh;
+}
+.containerWithProduct{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 20vw;
+    max-height: auto;
+    gap: 2vh;
+    padding: 1vh;
+    border-radius:  12px;
+    border: 1px solid  #DDD;
+            
+}
+
+.priceContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    align-items: baseline;
+    h2{
+        color: #282828;
+       font-family: Montserrat;
+       font-size: 3vh;
+       font-style: normal;
+       font-weight: 600;
+       }
+    p{
+        
+        color:  #8B8B8B;
+        font-family: Montserrat;
+        font-size: 1vw;
+        font-style: normal;
+        font-weight: 500;
+       
+    }
+}
+
+.titleAndPriceContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2vh;
+     gap: 1vw;
+    h3{
+    overflow: hidden;
+    color: #282828;
+    text-overflow: ellipsis;
+    font-family: Montserrat;
+    font-size: 2vh;
+    font-style: normal;
+    font-weight: 500;
+    }
+
+
+}
+    
+.containerWithImgAndBtn {
+    position: relative;
+    padding: 1vw;
+    border-bottom: 1px solid  #DDD;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .discountContainer{
+        @include discount($customRight: -2vw, $customTop: -1vw); 
+    }
+    
+        
+        img{
+        
+            width: 15vw;
+            height: 15vw;
+            object-fit: cover;
+            border-radius: 12px;
+            
+        
+            }
+    
+    }
+
+.addToCartButton {
+    display: flex;
+    max-width: 15vw;
+    position: absolute;
+    padding: 2vh 4vw;
+    justify-content: center;
+    align-items: center;
+    border-radius:  6px;
+    background:  #393;
+    color:  #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+transition: background 0.3s ease, color 0.3s ease;
+  }
+  .addToCartButton:hover {
+    background: black;
+    color: white;
+    border-radius: 6px;
+  }
+
+.addedButton {
+max-width: 15vw;
+position: absolute;
+padding: 2vh 4vw;
+justify-content: center;
+align-items: center;
+border-radius:  6px;
+background:  white;
+color:  black;
+text-align: center;
+font-family: Montserrat;
+font-size: 1vw;
+font-style: normal;
+font-weight: 600;
+border-radius: 6px;
+border: 1px solid  #282828;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .mainContainer{
+        padding:0 2vh 0 2vh;  
+    } 
+    .containerWithImgAndBtn{
+    .addToCartButton {
+        max-width: 15vw;
+        max-height: 1vw;
+        padding: 1.5vw 4vw;
+      
+    }
+
+    .addToCartButton:hover {
+        background: #393!important;
+        color: white;
+        border-radius: 6px;
+    }
+
+    .addedButton {
+        max-width: 15vw;
+        max-height: 1vw;
+        padding: 1.5vw 4vw;
+       
+    }
+}
+.titleAndPriceContainer{
+    padding: 1vw;   
+    h3{
+        font-size: 1.5vw;
+    }
+}
+.priceContainer{
+    flex-wrap: wrap;
+    h2 {
+        font-size: 3vw;
+      } 
+       p{
+        font-size: 2vw;
+      }
+}
+.discountContainer{
+    right: 45vw;
+    top: 17vh;
+    p{
+      font-size: 2vw!important;
+    }
+}
+
+}
+@media screen and (max-width: 768px){
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+        max-width: 100vw;
+        justify-content:  center;
+        align-items: baseline;
+        padding: 0  5vh 0 5vh;
+        h1{
+            font-size:4vw;
+        }
+
+    }
+    .containerWithProduct{
+        justify-content: flex-start;
+        min-height: 40vw;
+        min-width: 35vw;
+        align-items: center;
+    }
+    .containerWithImgAndBtn{
+        padding: 1vw;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+            padding: 1vw;
+}
+.addedButton,
+.addToCartButton{
+    max-width: 30vw;
+    max-height: 2vw;
+    padding: 2vh 6vw;
+    font-size: 1.5vh;
+}
+
+}
+.titleAndPriceContainer{
+    
+    h3{
+        font-size: 4vw;
+    }
+}
+.priceContainer{
+    flex-wrap: wrap;
+    h2 {
+        font-size: 5vw;
+      } 
+       p{
+        font-size: 4vw;
+      }
+}
+.discountContainer{
+    right: 45vw;
+    top: 17vh;
+    p{
+      font-size: 3vw!important;
+    }
+}
+}

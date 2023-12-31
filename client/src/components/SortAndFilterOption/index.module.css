@@ -18,11 +18,13 @@
           align-items: center;
   gap: 2vw;
   padding: 2vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .sortBtnAndInputsContainer h4 {
-  color: var(--txt-black, #282828);
+  color: #282828;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 2vw;
   font-style: normal;
   font-weight: 600;
 }
@@ -30,18 +32,54 @@
 .sortInp {
   color: #8B8B8B;
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 1.3vw;
   font-style: normal;
   font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 112px;
-  padding: 8px 16px;
+  max-width: 9vw;
+  padding: 0.5vw 1vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
   border-radius: 6px;
   border: 1px solid #DDD;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sortBtnAndInputsContainer {
+    max-width: 90vw;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .sortBtnAndInputsContainer h4 {
+    font-size: 2vw;
+  }
+  .sortBtnAndInputsContainer .sortInp {
+    font-size: 2vw;
+    max-width: 10vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sortBtnAndInputsContainer {
+    max-width: 80vw;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .sortBtnAndInputsContainer h4 {
+    font-size: 4vw;
+  }
+  .sortBtnAndInputsContainer .sortInp {
+    font-size: 3vw;
+    max-width: 16vw;
+  }
 }

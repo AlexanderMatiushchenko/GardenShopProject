@@ -16,6 +16,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 .mainHomePageDiv button {
   cursor: pointer;
@@ -25,6 +26,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 2vh 0 2vh 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -38,29 +40,28 @@
 .divWithLineAndButtonAllCategories h2 {
   color: #282828;
   font-family: Montserrat;
-  font-size: 64px;
+  font-size: 3.5vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%; /* 70.4px */
 }
 .divWithLineAndButtonAllCategories button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px 16px;
+  font-size: 1vw;
+  padding: 1vh 1vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
-  border-radius: var(--radius-small, 6px);
-  border: 1px solid var(--grey-divider, #DDD);
+  border-radius: 6px;
+  border: 1px solid #DDD;
 }
 
 .line {
-  width: 832px;
+  width: 50vw;
   height: 1px;
   background-color: #DDDDDD;
 }
@@ -69,16 +70,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px 16px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
-  border-radius: var(--radius-small, 6px);
-  border: 1px solid var(--grey-divider, #DDD);
+  border-radius: 6px;
+  border: 1px solid #DDD;
 }
 
 .divWithCheckoutBtn {
@@ -96,10 +95,8 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 1440px;
-  height: 600px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  width: 99vw;
+  height: 70vh;
 }
 
 .divWithCheckoutBtn::before {
@@ -110,6 +107,8 @@
   right: 0;
   bottom: 0;
   background: url("../../../assets/homepage/img1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
   z-index: -1;
@@ -128,68 +127,66 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 2vh 0 2vh 0;
 }
 .sale h2 {
   color: #282828;
   font-family: Montserrat;
-  font-size: 64px;
+  font-size: 3.5vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%; /* 70.4px */
+  margin-right: 3vw;
 }
 .sale button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 8px 16px;
+  padding: 1vh 1vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
-  border-radius: var(--radius-small, 6px);
-  border: 1px solid var(--grey-divider, #DDD);
+  font-size: 1vw;
+  border-radius: 6px;
+  border: 1px solid #DDD;
 }
 
 .buttonCheckOut {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 16px 56px;
+  padding: 0.7vw 3vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
   border-radius: 6px;
   background: #393;
   color: #FFF;
   text-align: center;
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 1.5vw;
   font-style: normal;
   font-weight: 600;
-  line-height: 130%; /* 26px */
 }
 
 .h1HomePage {
   color: #FFF;
   font-family: Montserrat;
-  font-size: 96px;
+  font-size: 4vw;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%; /* 105.6px */
 }
 
 .conteinerDiscountForm {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 32px 32px 0px 32px;
+  padding: 2vw 6vw 0vw 6vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -197,7 +194,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 24px;
+  gap: 1vw;
   border-radius: 12px;
   background: linear-gradient(261deg, #0B710B 32.63%, #393 98.96%);
 }
@@ -208,7 +205,6 @@
   font-size: 64px;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%; /* 70.4px */
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
@@ -231,102 +227,81 @@ del {
   color: black;
 }
 
-.discountForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 16px 32px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
+@media screen and (max-width: 1024px) {
+  .imgAndInputWithBtn {
+    max-width: 80vw;
+    max-height: 30vh;
+  }
+  .imgAndInputWithBtn img {
+    display: none;
+  }
+  .divWithLineAndButtonAllCategories button {
+    font-size: 2vw;
+  }
+  .divWithLineAndButtonAllCategories h2 {
+    font-size: 4vw;
+  }
+  .divWithCheckoutBtn {
+    width: 99vw;
+    height: 30vh;
+  }
+  h2 {
+    font-size: 4vw;
+  }
+  .sale button {
+    font-size: 2vw;
+  }
+  .sale h2 {
+    font-size: 4vw;
+    margin-right: 2vw;
+  }
+  .buttonCheckOut {
+    font-size: 3vw;
+    padding: 1vw 3vw;
+  }
+  .h1HomePage {
+    font-size: 5vw;
+  }
+  .conteinerDiscountForm h3 {
+    font-size: 5vw;
+  }
 }
-.discountForm input {
-  background-color: #0B710B;
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%; /* 26px */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 16px 32px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
-  border-radius: 6px;
-  border: 1px solid #FFF;
-}
-.discountForm input::-webkit-input-placeholder {
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%; /* 26px */
-}
-.discountForm input::-moz-placeholder {
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%; /* 26px */
-}
-.discountForm input:-ms-input-placeholder {
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%; /* 26px */
-}
-.discountForm input::-ms-input-placeholder {
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%; /* 26px */
-}
-.discountForm input::placeholder {
-  color: #FFF;
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 130%; /* 26px */
-}
-.discountForm button {
-  color: #282828;
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 130%; /* 26px */
-  width: 516px;
-  padding: 16px 32px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-  border-radius: 6px;
-  background: #FFF;
+@media screen and (max-width: 768px) {
+  .imgAndInputWithBtn {
+    max-width: 80vw;
+    max-height: 25vh;
+  }
+  .imgAndInputWithBtn img {
+    display: none;
+  }
+  .divWithLineAndButtonAllCategories button {
+    font-size: 2vw;
+  }
+  .divWithLineAndButtonAllCategories h2 {
+    font-size: 4vw;
+  }
+  .divWithCheckoutBtn {
+    width: 99vw;
+    height: 20vh;
+  }
+  h2 {
+    font-size: 4vw;
+  }
+  .sale button {
+    font-size: 2vw;
+  }
+  .sale h2 {
+    font-size: 4vw;
+    margin-right: 2vw;
+  }
+  .buttonCheckOut {
+    font-size: 3vw;
+    padding: 1vw 3vw;
+  }
+  .h1HomePage {
+    font-size: 5vw;
+  }
+  .conteinerDiscountForm h3 {
+    font-size: 5vw;
+  }
 }

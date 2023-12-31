@@ -1,28 +1,44 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState} from 'react';
 import { Carousel } from 'antd';
 import styles from "./index.module.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCategories } from '../../store/slices/categoriesSlice';
 import { Link } from 'react-router-dom';
+import { backendURL,frontendURL } from '../../utils/var';
 
 function CategoriesCarousel() {
-  const baseUrl = "http://localhost:3333";
+
+  const categoriesArr = useSelector(({ categories }) => categories.list);
+  const [dataLoaded, setDataLoaded] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchCategories());
+    const fetchData = async () => {
+      try {
+        await dispatch(fetchCategories());
+        setDataLoaded(true);
+      } catch (error) {
+        console.error('Error CategoriesCarousel:', error);
+      }
+    };
+
+    fetchData();
   }, [dispatch]);
 
-  const categoriesArr = useSelector(({ categories }) => categories.list);
-  const frontendUrl = "http://localhost:3000"
+  if (!dataLoaded) {
+    return <div>Loading...</div>;
+  }
+
+  
+ 
   return (
     <div> 
       <Carousel id={styles.carousel} autoplay  dots={true}  slidesToShow={4}>
         {categoriesArr.map((el) => (
-          <Link to={`${frontendUrl}/categories/${el.id}`}>
-          <div key={el.categoryId} className={styles.contentStyle}>
-            <img src={`${baseUrl}${el.image}`} alt={el.title} />
+          <Link key={el.id} to={`${frontendURL}/categories/${el.id}`}>
+          <div  className={styles.contentStyle}>
+            <img src={`${backendURL}${el.image}`} alt={el.title} />
             <h3>{el.title}</h3>
           </div>
           </Link>
