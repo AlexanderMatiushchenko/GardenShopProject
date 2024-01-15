@@ -1,12 +1,17 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
+  const [prevPathname, setPrevPathname] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollTo(0, 0);
+      
+      if (prevPathname !== pathname) {
+        window.scrollTo(0, 0);
+        setPrevPathname(pathname);
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -14,7 +19,7 @@ function ScrollToTop() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [pathname]);
+  }, [pathname, prevPathname]);
 
   return null;
 }

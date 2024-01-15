@@ -68,11 +68,11 @@
 }
 @media screen and (max-width: 768px) {
   .containerWithProductCounter h3 {
-    max-width: 10vw;
+    min-width: 10vw;
   }
   .containerWithProductCounter button {
     font-size: 8vw;
-    max-width: 10vw;
-    max-height: 10vw;
+    min-width: 10vw;
+    min-height: 10vw;
   }
 }

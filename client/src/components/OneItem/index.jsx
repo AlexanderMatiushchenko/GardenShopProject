@@ -68,12 +68,16 @@ const links = [
 
           
           <div className={styles.priceContainer}>
-          
+      {product.discont_price !== null ? (
+        <>
             <h2>{product.discont_price} €</h2>
           <h4>{product.price} €</h4>
+          </>
+          ):(
+          <h2>{product.price} €</h2>
           
+          )}
           </div>
-          
           <div className={styles.counterAndCartBtn}>
           <OneItemCounter product={product} onCountChange={setCount} />
 
