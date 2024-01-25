@@ -1,2 +1,2 @@
 Server is backend.
-Clien is frontend.
+Client is frontend.
