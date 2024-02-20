@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f3a1628e.css",
+    "main.js": "/static/js/main.126402ae.js",
+    "static/media/img1.svg": "/static/media/img1.3d1dc74be29c73a79e33.svg",
+    "static/media/kaktus.svg": "/static/media/kaktus.9797a05d32750f1e4c73a45647fb1bb1.svg",
+    "static/media/img2.svg": "/static/media/img2.3fbafcb0ed9ae2e7c0619e045664e093.svg",
+    "static/media/Montserrat-Italic-VariableFont_wght.ttf": "/static/media/Montserrat-Italic-VariableFont_wght.7451547bd28d8dddbeea.ttf",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/static/media/Montserrat-VariableFont_wght.7e687123cd4528224ce5.ttf",
+    "static/media/logo.svg": "/static/media/logo.b163ae69185c7aafe538bcdd49ea5ff1.svg",
+    "static/media/ic-whatsapp.svg": "/static/media/ic-whatsapp.976b56539522ecec4d232193ad478f23.svg",
+    "static/media/basket.svg": "/static/media/basket.5811eced3fe8014209a8d56d3d27c586.svg",
+    "static/media/ic-instagram.svg": "/static/media/ic-instagram.0535a50a5781079486ef5b060a7b6c86.svg",
+    "index.html": "/index.html",
+    "static/media/check box=active.svg": "/static/media/check box=active.6c1f9c31a1e6c9f86a3f.svg",
+    "static/media/4.svg": "/static/media/4.590e92c8cd10acbb1ea437041d6f515f.svg",
+    "main.f3a1628e.css.map": "/static/css/main.f3a1628e.css.map",
+    "main.126402ae.js.map": "/static/js/main.126402ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3a1628e.css",
+    "static/js/main.126402ae.js"
+  ]
+}
