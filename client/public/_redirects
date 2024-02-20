@@ -1,0 +1,2 @@
+/products/all/*    https://gardenshopproject.onrender.com/products/all/:splat  200
+/categories/*      https://gardenshopproject.onrender.com/categories/:splat     200
