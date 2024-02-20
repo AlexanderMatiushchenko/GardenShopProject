@@ -4,17 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
+
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "start": "react-scripts start",
-    "build": "react-scripts build"
-=======
+    "build": "react-scripts build",
      "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "start": "react-scripts start",
   "build": "react-scripts build"
->>>>>>> 6a55d5e6f6e04cf961fe687dabe21bdeaaab283f
+
   },
   "author": "hayk",
   "license": "ISC",
