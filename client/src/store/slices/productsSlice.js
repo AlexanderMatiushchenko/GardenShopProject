@@ -6,7 +6,7 @@ const initialState = {
 export const  fetchAllProducts = createAsyncThunk(
     'products/allProducts',
     async()=>{
-        const response = await fetch(`${backendURL}"/products/all"`)
+        const response = await fetch(`${backendURL}/products/all`)
         const data = await response.json()
         return data;
     }
