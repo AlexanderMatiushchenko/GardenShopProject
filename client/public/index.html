@@ -9,5 +9,19 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Добавьте следующий скрипт для обработки маршрутов на стороне клиента -->
+    <script>
+      // Проверяем, поддерживает ли браузер API History
+      if (window.history && window.history.pushState) {
+        // Перенаправляем любые запросы на index.html
+        window.addEventListener("load", function () {
+          // Получаем текущий путь
+          var path = window.location.pathname;
+
+          // Отправляем запрос на index.html, но сохраняем текущий путь
+          window.history.pushState({ path: path }, "", "/index.html" + path);
+        });
+      }
+    </script>
   </body>
 </html>
