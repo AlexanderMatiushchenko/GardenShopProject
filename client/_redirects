@@ -1,3 +1,0 @@
-http://localhost:3000/*    https://gardenshopproject.onrender.com/:splat  200
-
-http://localhost:3333/* https://backend-garden-shop.onrender.com/:splat 200
