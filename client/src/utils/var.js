@@ -1,3 +1,3 @@
 
-export const backendURL = "https://backend-garden-shop.onrender.com/";
-export const frontendURL = "https://gardenshopproject.onrender.com/";
+export const backendURL = "http://localhost:3333";
+export const frontendURL = "http://localhost:3000";
